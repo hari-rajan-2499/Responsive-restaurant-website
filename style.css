@@ -68,7 +68,7 @@ ul {
 header {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0.648)), url(/cssfolder/banner.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0.648)), url(cssfolder/banner.jpg);
     background-size: cover;
     background-position: top;
     display: flex;
