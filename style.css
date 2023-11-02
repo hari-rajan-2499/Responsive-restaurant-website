@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+li>a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 30px;
+    font-weight: 500;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.topnavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /*position: absolute; deleted from browser
+    top: 0;
+    left: 0;*/
+    color: #000;
+    background-color: whitesmoke;
+    height: 80px;
+    /*new style*/
+}
+
+.logo {
+    margin: 20px;
+}
+
+.ul-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.activee {
+    color: red;
+    font-weight: bold;
+
+}
+
+#myicondiv {
+    display: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0.648)), url(/cssfolder/banner.jpg);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header_content .h33 {
+    font-size: clamp(0.8rem, 4vw, 2rem);
+    margin: 0;
+}
+
+.header_content .h11 {
+    font-size: clamp(1rem, 6vw, 3rem);
+    margin: 30px 0px 45px 0px;
+}
+
+.banner-content {
+    color: #ffffff;
+}
+
+.line {
+    background-color: crimson;
+    width: 150px;
+    height: 4px;
+    margin: 10px auto;
+}
+
+.ctnn {
+    background-color: crimson;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    text-decoration: none;
+}
+
+/*section part*/
+.section-container {
+    width: 80%;
+    /*background-color: blueviolet;*/
+    margin: 100px auto;
+}
+
+.section-title {
+    text-align: center;
+
+    margin: 90px auto 50px auto;
+}
+
+.section-title>h2 {
+    font-size: clamp(0.9rem, 4.1vw, 2.2rem);
+}
+
+.row {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    /*background-color: green;*/
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 80px;
+    width: 63vw;
+
+}
+
+
+.col>img {
+    width: 88%;
+}
+
+.col>p {
+    font-size: x-large;
+    font-weight: lighter;
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+
+}
+
+.col-h2 {
+    margin-top: 10px;
+}
+
+.col-h2-p {
+    margin-bottom: 5px;
+    font-size: clamp(0.9rem, 2vw, 1.6rem);
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    padding: 50px 0 20px 0;
+
+}
+
+.orderbutton {
+    font-size: clamp(0.4rem, 1vw, 1rem);
+}
+
+/*.mainclass {
+    
+}*/
+
+.box {
+    width: 20%;
+    height: 500px;
+    background-color: blueviolet;
+}
+
+/*---------------------welcome section container-----------------------*/
+
+#welcome-intro-section {
+    display: flex;
+    height: 500px;
+    margin: 50px 20px;
+    column-gap: 15px;
+
+
+}
+
+.eating-welcome-image {
+    display: grid;
+    place-items: center;
+}
+
+.eating-welcome-image img {
+    width: 100%;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 116vw;
+}
+
+.intro-content h2 {
+    text-transform: capitalize;
+}
+
+.intro-content p {
+    font-size: clamp(0.6rem, 1.2vw, 1.5rem);
+    text-align: justify;
+}
+
+/*-----------------media queries---------------------*/
+
+@media all and (max-width:995px) {
+
+    .logo {
+        margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .ul-links {
+        flex-direction: column;
+        background-color: dimgray;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        /*margin-top: -900px;*/
+        transition: all 0.5s ease-in-out;
+        margin-left: -1000px;
+        margin-top: auto;
+    }
+
+    .addul {
+        /*margin-top: 0px;*/
+        margin-left: 0;
+    }
+
+    .ul-links>li {
+        position: relative;
+        top: 30px;
+        width: 100%;
+        text-align: center;
+
+        padding: 10px;
+
+    }
+
+    .ul-links>li:hover {
+        background-color: darkslategray;
+    }
+
+    #myicondiv {
+        display: block;
+        position: absolute;
+        top: 21px;
+        right: 30px;
+        font-size: xx-large;
+        cursor: pointer;
+        /*color:rgba(178, 110, 196, 0.874);*/
+
+    }
+
+    /*section*/
+    .row {
+        flex-direction: row;
+        width: 77vw;
+
+    }
+
+    .col {
+        margin-bottom: 30px;
+    }
+
+    .section-container {
+        margin: 20px auto;
+    }
+
+    .section-title {
+        margin: 20px auto;
+    }
+
+    
+}
+
+
+
+@media all and (max-width:280px) {
+    .logo {
+        margin: 0;
+        position: absolute;
+        top: 29px;
+        left: 20px;
+    }
+
+    #myicondiv {
+        display: block;
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        font-size: x-large;
+        cursor: pointer;
+
+    }
+
+}
+
+@media all and (max-width:790px) {
+    #welcome-intro-section {
+
+        flex-wrap: wrap;
+        height: fit-content;
+        row-gap: 15px;
+        margin: 20px;
+    }
+
+    .eating-welcome-image {
+        width: 60%;
+        margin: auto;
+
+    }
+}
+
+@media all and (max-width:635px) {
+    .row {
+        flex-direction: column;
+        width: 77vw;
+
+    }
+}
