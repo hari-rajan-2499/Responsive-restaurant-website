@@ -117,13 +117,13 @@ header {
 .section-container {
     width: 80%;
     /*background-color: blueviolet;*/
-    margin: 100px auto;
+    margin: 160px auto;
 }
 
 .section-title {
     text-align: center;
 
-    margin: 90px auto 50px auto;
+    margin: 100px auto 40px auto;
 }
 
 .section-title>h2 {
@@ -223,7 +223,81 @@ header {
     text-align: justify;
 }
 
-/*-----------------media queries---------------------*/
+
+
+/*---------------- slider container section ------------------*/
+
+.whole-slider-container{
+    position: relative;
+}
+.swiper-cards-container{
+    width: 100%;
+}
+
+.swiper-button-prev i::before,
+.swiper-button-next i::before{
+    content:'';
+}
+
+
+.card-image-container img{
+    display: block;
+    
+    height: auto;
+}
+
+#swiper-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:80vw;
+
+}
+
+.swiper-wrap-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.card-image-container img{
+    width: 100%;
+}
+.single-card-container{
+    
+     border: 1px solid #000;
+     
+ }
+
+.card-image-intro-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 2px;
+    row-gap: 10px;
+    background-color: white;
+}
+.card-image-intro-content h2{
+  font-size: clamp(1.2rem,2vw,1.4rem);
+  margin: 0px;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.card-image-intro-content p{
+    text-align: center;
+    margin: 0px;
+    font-size: clamp(0.7rem,1vw,1rem);
+}
+
+
+
+/*---------------- slider container section ------------------*/
+
+
+
+/*----------------- media queries ---------------------*/
 
 @media all and (max-width:995px) {
 
@@ -289,11 +363,11 @@ header {
     }
 
     .section-container {
-        margin: 20px auto;
+        margin: 130px auto;
     }
 
     .section-title {
-        margin: 20px auto;
+        margin: 40px auto 30px;
     }
 
     
@@ -343,4 +417,33 @@ header {
         width: 77vw;
 
     }
+}
+
+
+/******************* BREAK POINTS *********************/
+/******************* FOR SMALL DEVICES *********************/
+@media screen and (max-width:320px){
+    .card-image-intro-content{
+        padding: 0.3rem;
+    } 
+
+}
+
+
+
+/******************* FOR MEDIUM DEVICES *********************/
+@media screen and (max-width:600px){
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+           display: block;
+    }
+
+}
+
+@media screen and (max-width:499.9px){
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+           display:none;
+    }
+
 }

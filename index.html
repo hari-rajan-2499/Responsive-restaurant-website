@@ -11,6 +11,37 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!------------------------swiper style --------------------------->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!------------------------------- REMIX ICON LINK ------------------------------------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!-------------------------------- BOOSTRAP ---------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Responsive card slider</title>
+    <style>
+        .swipercards-js-style {
+            width: 100%;
+        }
+
+        .single-card-container {
+            width: 25vw;
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: 4vw;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            right: 4vw;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -22,7 +53,7 @@
             <li><a href="#">contact</a></li>
             <li><a href="#">order online</a></li>
             <li><a href="#">outlets</a></li>
-            
+
         </ul>
         <div id="myicondiv"><i class="fa-solid fa-bars myiconmenu"></i></div>
     </nav>
@@ -43,14 +74,20 @@
         </div>
         <div class="intro-content">
             <h2>welcome to <span style="color:red">KN</span> restaurent</h2>
-            <p>We believe in great service, from the moment you arrive, to the moment you leave you’ll experience our renowned hospitality that is second to none.
-                Offering an extensive choice of traditional Indian cuisine which our customers have been enjoying for the past 10 years.We invite you to indulge in the rich flavors and vibrant spices of South India. Our menu features a wide variety of authentic dishes, from crispy dosas to aromatic biryanis. Our chefs use only the freshest ingredients and traditional cooking techniques to create dishes that are sure to tantalize your taste buds. Whether you’re a long-time fan of South Indian cuisine or a first-time visitor, we guarantee that you’ll leave our restaurant feeling satisfied and happy</p>
+            <p>We believe in great service, from the moment you arrive, to the moment you leave you’ll experience our
+                renowned hospitality that is second to none.
+                Offering an extensive choice of traditional Indian cuisine which our customers have been enjoying for
+                the past 10 years.We invite you to indulge in the rich flavors and vibrant spices of South India. Our
+                menu features a wide variety of authentic dishes, from crispy dosas to aromatic biryanis. Our chefs use
+                only the freshest ingredients and traditional cooking techniques to create dishes that are sure to
+                tantalize your taste buds. Whether you’re a long-time fan of South Indian cuisine or a first-time
+                visitor, we guarantee that you’ll leave our restaurant feeling satisfied and happy</p>
         </div>
     </div>
 
     <!-------------------------------------WE R HERE TO SERVE U SECTION CONTAINER --------------------------------------------------------->
 
-    <section class="section-container">
+    <!--<section class="section-container">
         <div class="section-title">
             <h2>We are always here to serve you</h2>
             <div class="line"></div>
@@ -70,10 +107,139 @@
             </div>
         </div>
 
+    </section>-->
+
+
+    <!------------------------------------- SWIPER SECTION --------------------------------------------------------->
+    <div class="section-title">
+        <h2>We are always here to serve you</h2>
+        <div class="line"></div>
+    </div>
+    <div class="whole-slider-container">
+        <!-- Navigation buttons -->
+        <div class="swip-pre">
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+        </div>
+        <div id="swiper-section" class="swiper">
+            <div class="swiper-cards-container">
+                <div class="swipercard-js-style">
+                    <div class="swiper-wrapper">
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/Aatu-Erachi-Kola-Urundai-scaled.jpg" alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>Kola-Urundai</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/ilaneer-payasam-munveedu-restaurant-adyar-chennai.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>ilaneer payasam</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/Kothu-Paratha-scaled.jpg" alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>Kothu Paratha</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/Kozhi-Porichathu.jpg" alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>Kozhi Porichathu</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/Kozhi-Sukka.jpg" alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>Kozhi Sukka</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+                        <div class="single-card-container swiper-slide">
+                            <div class="card-image-container">
+                                <img src="cssfolder/card slider images/Madurai-Nattu-Kozhi-Idichathu-scaled.jpg" alt="">
+                            </div>
+                            <div class="card-image-intro-content">
+                                <h2>Nattu Kozhi</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-danger mybutton-style">view more</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination" style="bottom: -55px;"></div>
+
+        <!-- Navigation buttons -->
+        <div class="swip-next">
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+        </div>
+    </div>
+
+
+<!-------------------------------------WE R HERE TO SERVE U SECTION CONTAINER --------------------------------------------------------->
+    <section class="section-container">
+        <div class="section-title">
+            <h2>A taste you’ll remember</h2>
+            <div class="line"></div>
+        </div>
+        <div class="row rowstyle" style="margin: auto;--bs-gutter-x:0;">
+            <div class="col col1">
+                <img src="cssfolder/veg.jpeg" alt="vegmeals">
+                <h2 class="col-h2-p  col-h2">Veg meals</h2>
+                <p class="col-h2-p">Food that’s good for your heart</p>
+                <a href="#" class="ctnn orderbutton">Order now</a>
+            </div>
+            <div class="col col2">
+                <img src="cssfolder/non-veg-meals-2.jpg" alt="nonvegmeals">
+                <h2 class="col-h2-p col-h2">Non-veg meals</h2>
+                <p class="col-h2-p">Food that makes you happy</p>
+                <a href="#" class="ctnn orderbutton">Order now</a>
+            </div>
+        </div>
+
     </section>
-    
+
+
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>-->
+
+    <script src="swiper-bundle.min.js"></script>
     <script src="myjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
 
