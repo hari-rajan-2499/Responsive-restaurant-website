@@ -227,50 +227,52 @@ header {
 
 /*---------------- slider container section ------------------*/
 
-.whole-slider-container{
+.whole-slider-container {
     position: relative;
 }
-.swiper-cards-container{
+
+.swiper-cards-container {
     width: 100%;
 }
 
 .swiper-button-prev i::before,
-.swiper-button-next i::before{
-    content:'';
+.swiper-button-next i::before {
+    content: '';
 }
 
 
-.card-image-container img{
+.card-image-container img {
     display: block;
-    
+
     height: auto;
 }
 
-#swiper-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:80vw;
-
-}
-
-.swiper-wrap-style{
+#swiper-section {
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+    width: 80vw;
+
+}
+
+.swiper-wrap-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.card-image-container img{
+.card-image-container img {
     width: 100%;
 }
-.single-card-container{
-    
-     border: 1px solid #000;
-     
- }
 
-.card-image-intro-content{
+.single-card-container {
+
+    border: 1px solid #000;
+
+}
+
+.card-image-intro-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -279,23 +281,112 @@ header {
     row-gap: 10px;
     background-color: white;
 }
-.card-image-intro-content h2{
-  font-size: clamp(1.2rem,2vw,1.4rem);
-  margin: 0px;
-  text-transform: capitalize;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.card-image-intro-content h2 {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin: 0px;
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.card-image-intro-content p{
+
+.card-image-intro-content p {
     text-align: center;
     margin: 0px;
-    font-size: clamp(0.7rem,1vw,1rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 
 
 /*---------------- slider container section ------------------*/
 
+/*-----------------  Footer section --------------------------*/
 
+.footer-section {
+    background-color: #24242b;
+    padding: 70px 0;
+}
+
+.footer-inner-section {
+    width: 90vw;
+    margin: auto;
+
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-col ul,
+.footer-col a {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: relative;
+
+
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: #e91e63;
+    left: 0;
+    bottom: -10px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: capitalize;
+    display: block;
+    color: #bbbbbb;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
 
 /*----------------- media queries ---------------------*/
 
@@ -370,7 +461,9 @@ header {
         margin: 40px auto 30px;
     }
 
-    
+
+
+
 }
 
 
@@ -420,30 +513,70 @@ header {
 }
 
 
+@media screen and (max-width:700px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 50px
+    }
+    .footer-row div:last-child{
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (min-width:701px) {
+    .footer-col {
+        width: 33%;
+        margin-bottom: 50px;
+    }
+
+    .footer-row div:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+
 /******************* BREAK POINTS *********************/
 /******************* FOR SMALL DEVICES *********************/
-@media screen and (max-width:320px){
-    .card-image-intro-content{
+@media screen and (max-width:320px) {
+    .card-image-intro-content {
         padding: 0.3rem;
-    } 
+    }
 
 }
 
 
 
 /******************* FOR MEDIUM DEVICES *********************/
-@media screen and (max-width:600px){
+@media screen and (max-width:600px) {
+
     .swiper-button-prev::after,
-    .swiper-button-next::after{
-           display: block;
+    .swiper-button-next::after {
+        display: block;
     }
 
 }
 
-@media screen and (max-width:499.9px){
+@media screen and (max-width:499.9px) {
+
     .swiper-button-prev::after,
-    .swiper-button-next::after{
-           display:none;
+    .swiper-button-next::after {
+        display: none;
     }
+
+
+    .footer-col {
+        width: 100%;
+        
+    }
+    .footer-row div:last-child{
+        margin-bottom: 0;
+    }
+
+
+
 
 }
