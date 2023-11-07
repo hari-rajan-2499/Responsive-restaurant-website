@@ -359,7 +359,7 @@ header {
     color: #ffffff;
     font-weight: 300;
     text-transform: capitalize;
-    display: block;
+    
     color: #bbbbbb;
     transition: all 0.3s ease;
 }
