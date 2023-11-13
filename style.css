@@ -149,8 +149,9 @@ header {
 
 .col>p {
     font-size: x-large;
-    font-weight: lighter;
+    font-weight: 100;
     font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+    font-family: 'Poppins';
 
 }
 
@@ -500,10 +501,9 @@ a {
     padding: 50px;
 }
 
-.north-indian-food-description h1,
-button {
+.north-indian-food-description h1 {
     color: crimson;
-    font-family: Asap, sans-serif;
+    
     font-weight: 700;
 }
 
@@ -514,6 +514,7 @@ button {
     margin-top: 1rem;
     cursor: pointer;
     font-size: clamp(0.6rem, 1vw, 1rem);
+    font-weight: 500;
 
 
 }
@@ -522,15 +523,16 @@ button {
     background-color: brown;
 }
 
-.north-indian-food-description h2,
+.north-indian-food-description h2, .north-indian-food-description
 p {
     color: #585858;
-    font-family: Asap, sans-serif;
+    
 }
 
 .north-indian-food-description p {
     line-height: 1.5rem;
     text-align: justify;
+    font-weight: 500;
 }
 
 
