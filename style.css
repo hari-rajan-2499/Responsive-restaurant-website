@@ -299,6 +299,175 @@ header {
 
 /*---------------- slider container section ------------------*/
 
+/*--------------------------contact-section----------------*/
+.contact-us-headline {
+    width: 100vw;
+    color: #000;
+    background-color: #E8E8E8;
+    
+
+}
+
+.contact-us-headline h1 {
+
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    color: darkslategrey;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+.contact-us-headline h1::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 9rem;
+    background-color: #e91e63;
+    bottom: 21px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+#form-whole-container {
+    display: flex;
+    width: 100vw;
+    margin: auto;
+    padding: 60px 100px 100px 100px;
+    background-color: #E8E8E8;
+}
+
+.form-group {
+
+    margin-bottom: 1rem;
+}
+
+.contact-footer-col ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.contact-footer-col {
+    width: 40vw;
+    background-color: #F8F9FA;
+    display: flex;
+    row-gap: 10px;
+    line-height: 2rem;
+    padding: 50px;
+    border-right: inset;
+}
+
+#contactForm {
+
+    margin: auto;
+    width: 60vw;
+    padding: 50px;
+    background-color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+
+    font-size: clamp(0.8rem, 1vw, 1rem);
+
+}
+
+input[type="submit"] {
+    padding: 0.5rem 1rem;
+
+
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+label {
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contact-footer-col ul,
+.contact-footer-col ul li a {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-footer-col ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.contact-footer-col ul li a i {
+    padding: 6px;
+    font-size: 1rem;
+}
+
+.contact-footer-col ul button {
+    background-color: red;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+    margin: 10px 0 10px 5px;
+    cursor: pointer;
+
+
+
+}
+
+.contact-footer-col ul button:hover {
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    text-transform: capitalize;
+}
+
+
+
 /*-----------------  Footer section --------------------------*/
 
 .footer-section {
@@ -359,7 +528,7 @@ header {
     color: #ffffff;
     font-weight: 300;
     text-transform: capitalize;
-    
+
     color: #bbbbbb;
     transition: all 0.3s ease;
 }
@@ -518,7 +687,8 @@ header {
         width: 50%;
         margin-bottom: 50px
     }
-    .footer-row div:last-child{
+
+    .footer-row div:last-child {
         margin-bottom: 0;
     }
 
@@ -537,6 +707,69 @@ header {
 
 }
 
+/************************ Contact Form Section *****************************/
+@media all and (max-width:910px) {
+
+    .contact-footer-col,
+    #contactForm {
+        padding: 50px 25px;
+
+    }
+
+    .contact-footer-col ul button {
+
+        width: 60%;
+
+
+        cursor: pointer;
+
+
+
+    }
+
+
+
+}
+
+@media all and (max-width:780px) {
+
+    #form-whole-container {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+        padding: 0;
+    }
+
+    .contact-footer-col,
+    #contactForm {
+        padding: 50px 25px;
+
+    }
+
+    .contact-footer-col {
+        width: 80vw;
+        margin: 0 auto 50px auto;
+
+
+    }
+
+    #contactForm {
+
+        margin: auto;
+        width: 80vw;
+        margin: 50px auto 0 auto;
+
+
+    }
+}
+
+@media all and (max-width:281px) {
+
+    .contact-footer-col,
+    #contactForm {
+        width: 86vw;
+
+    }
+}
 
 
 /******************* BREAK POINTS *********************/
@@ -570,9 +803,10 @@ header {
 
     .footer-col {
         width: 100%;
-        
+
     }
-    .footer-row div:last-child{
+
+    .footer-row div:last-child {
         margin-bottom: 0;
     }
 
