@@ -784,7 +784,7 @@ p {
         flex-direction: column;
         width: 90vw;
         row-gap: 20px;
-        margin: 0 auto 100px auto;
+        margin: auto;
         height: 80vh;
 
 
@@ -810,6 +810,119 @@ p {
     }
 
 }
+
+/*@media screen and (min-width:650px) and (max-width:800px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 300px;
+        
+
+    }
+    
+}*/
+
+@media screen and (max-width:400px) {
+    #north-indian-food-section {
+        margin-bottom: 180px;
+
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:480px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 8rem;
+        
+
+    }
+    
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:500px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 10rem;
+        
+
+    }
+    
+}
+
+@media screen and (min-width:500px) and (max-width:520px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 12rem;
+        
+
+    }
+}
+
+@media screen and (min-width:520px) and (max-width:555px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 14rem;
+        
+
+    }
+}
+
+
+
+
+
+@media screen and (min-width:555px) and (max-width:610px) {
+    
+        #north-indian-food-section {
+            
+            margin-bottom: 15rem;
+            
+    
+        }
+    
+}
+
+@media screen and (min-width:610px) and (max-width:650px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 18rem;
+        
+
+    }
+
+}
+
+@media screen and (min-width:650px) and (max-width:700px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 310px;
+        
+
+    }
+    
+}
+
+@media screen and (min-width:700px) and (max-width:800px) {
+    
+    #north-indian-food-section {
+        
+        margin-bottom: 330px;
+        
+
+    }
+    
+}
+
+
+
 
 /************************ Contact Form Section *****************************/
 @media all and (max-width:910px) {
