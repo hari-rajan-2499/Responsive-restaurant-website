@@ -6,6 +6,23 @@ mymenubar.addEventListener('click', () => {
     mybodyy.classList.toggle('byaxis')
 })
 
+let nav_atag = document.querySelectorAll(".ul-links li a");
+let nav_1st_a_tag=document.querySelector(".f");
+nav_atag.forEach((anchor_tag) => {
+    anchor_tag.addEventListener("mouseover", () => {
+        nav_1st_a_tag.classList.remove('activee')
+        anchor_tag.classList.add('activee');
+
+        
+
+    })
+
+    anchor_tag.addEventListener('mouseout',()=>{
+        anchor_tag.classList.remove('activee')
+    })
+
+
+})
 
 
 /********************* Swiper js  **************************/
@@ -18,8 +35,8 @@ let swiperCards = new Swiper('.swipercard-js-style', {
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
-        clickable:true,
-        dynamicBullets:true,
+        clickable: true,
+        dynamicBullets: true,
     },
 
     // Navigation arrows

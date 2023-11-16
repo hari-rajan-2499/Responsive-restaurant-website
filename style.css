@@ -14,8 +14,8 @@ li>a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    padding: 30px;
-    font-weight: 500;
+    /*padding: 30px;*/
+    font-weight: 600;
 }
 
 
@@ -47,15 +47,21 @@ ul {
     align-items: center;
     margin: 0;
     padding: 0;
+    gap: 4rem;
 
+}
+.ul-links li:last-child{
+    margin-right: 30px;
 }
 
 .activee {
     color: red;
-    font-weight: bold;
+    
 
 }
-
+.ul-links li a:active{
+    color: #000;
+}
 #myicondiv {
     display: none;
     margin: 0;
@@ -648,6 +654,7 @@ a {
         transition: all 0.5s ease-in-out;
         margin-left: -1000px;
         margin-top: auto;
+        gap: 0;
     }
 
     .addul {
