@@ -233,6 +233,58 @@ header {
     text-align: justify;
 }
 
+/************************* gravy section **************************/
+#gravy-img-content-section {
+    width: 80vw;
+    margin: 90px auto 60px auto;
+}
+
+#gravy-outer-section {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gravy-img-section,
+.gravy-content-section {
+    width: 50%;
+}
+
+.gravy-img-section img {
+    width: 100%;
+}
+
+.gravy-content-section {
+    background-color: #f4f4f4;
+    padding: 60px 70px;
+    position: relative;
+    left: -5rem;
+}
+
+
+.gravy-content-section p {
+    color: black;
+}
+
+.gravy-content-section p {
+    /* color: black; */
+    line-height: 1.6rem;
+    margin-bottom: 10px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    /* font-weight: 100; */
+    color: #585858;
+    font-family: sans-serif;
+}
+
+button {
+    padding: 5px 20px;
+    background-color: crimson;
+    color: #fff;
+    font-size: clamp(0.6rem, 1vw, 1rem);
+    font-weight: bolder;
+
+}
 
 
 /*---------------- slider container section ------------------*/
@@ -519,7 +571,7 @@ a {
 
     align-items: center;
     width: 90vw;
-    margin: 0 auto 85px auto;
+    margin: 75px auto 90px auto;
 
 }
 
@@ -551,7 +603,7 @@ a {
     font-weight: 700;
 }
 
-.north-indian-food-description button {
+.north-indian-food-description .button-style {
     padding: 0 20px;
     background-color: crimson;
     color: #fff;
@@ -563,7 +615,7 @@ a {
 
 }
 
-.north-indian-food-description button:hover {
+.north-indian-food-description .button-style:hover {
     background-color: brown;
 }
 
@@ -636,7 +688,7 @@ a {
 }
 
 .footer-col ul li a {
-    font-size:clamp(0.9rem,1vw,1rem);
+    font-size: clamp(0.9rem, 1vw, 1rem);
     color: #ffffff;
     font-weight: 300;
     text-transform: capitalize;
@@ -742,6 +794,7 @@ a {
     .section-title {
         margin: 40px auto 30px;
     }
+
 
     /************#bg-banner-img2-section***********/
 
@@ -858,6 +911,20 @@ a {
 
 /******************** media queries bg-banner-img2 section *************************/
 @media screen and (max-width:1150px) {
+    /********************** welcome section *******************/
+
+    #welcome-intro-section {
+
+        margin: 30px 20px 70px 20px;
+
+    }
+
+    #gravy-img-content-section {
+
+        margin: 70px auto 60px auto;
+    }
+
+
     #bg-banner-img2-section {
         padding: 30px 80px;
     }
@@ -865,6 +932,21 @@ a {
     .bg-banner-img2-outer-container {
         margin: 0 40px;
     }
+}
+
+/************************* media query gravy section **************************/
+@media screen and (max-width:1050px) {
+    #gravy-img-content-section {
+        width: 90vw;
+        
+
+    }
+    #welcome-intro-section {
+        margin: 30px 20px 20px 20px;
+    }
+    
+    
+
 }
 
 @media screen and (max-width:950px) {
@@ -876,7 +958,43 @@ a {
         margin: 0 30px;
     }
 
+
+    /************************* media query gravy section **************************/
+    #gravy-img-content-section {
+        width: 90vw;
+        margin: 0 auto;
+
+    }
+
+    #gravy-outer-section {
+        flex-wrap: wrap;
+        padding: 30px 0px;
+    }
+
+    .gravy-img-section,
+    .gravy-content-section {
+        width: 100%;
+    }
+
+    .gravy-img-section img {
+        object-fit: cover;
+        height: 300px;
+    }
+
+    .gravy-content-section {
+
+        padding: 30px 40px;
+        position: relative;
+        left: 0;
+        margin-top: -4px;
+    }
+
+
+
 }
+
+
+
 
 @media screen and (max-width:860px) {
     #bg-banner-img2-section {
@@ -906,7 +1024,7 @@ a {
 
     }
 
-    
+
 
 
 
@@ -969,115 +1087,7 @@ a {
 
 }
 
-/*@media screen and (min-width:650px) and (max-width:800px) {
-    
-    #north-indian-food-section {
-        
-        margin-bottom: 300px;
-        
 
-    }
-    
-}*/
-
-/*@media screen and (max-width:400px) {
-    #north-indian-food-section {
-        margin-bottom: 155px;
-
-    }
-}
-
-@media screen and (min-width:400px) and (max-width:480px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 11rem;
-
-
-    }
-
-}
-
-
-
-@media screen and (min-width:480px) and (max-width:500px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 13rem;
-
-
-    }
-
-}
-
-@media screen and (min-width:500px) and (max-width:520px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 16rem;
-
-
-    }
-}
-
-@media screen and (min-width:520px) and (max-width:555px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 17rem;
-
-
-    }
-}
-
-
-
-
-
-@media screen and (min-width:555px) and (max-width:610px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 18rem;
-
-
-    }
-
-}
-
-@media screen and (min-width:610px) and (max-width:650px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 20rem;
-
-
-    }
-
-}
-
-@media screen and (min-width:650px) and (max-width:700px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 340px;
-
-
-    }
-
-}
-
-@media screen and (min-width:700px) and (max-width:800px) {
-
-    #north-indian-food-section {
-
-        margin-bottom: 370px;
-
-
-    }
-
-}*/
 
 
 
