@@ -336,7 +336,7 @@ header {
 }
 
 .bg-banner-img2-inner-container-row p {
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    font-size: clamp(1.2rem, 1.2vw, 1.2rem);
     color: white;
     font-family: cursive;
 
