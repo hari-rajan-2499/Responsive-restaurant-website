@@ -50,18 +50,21 @@ ul {
     gap: 4rem;
 
 }
-.ul-links li:last-child{
+
+.ul-links li:last-child {
     margin-right: 30px;
 }
 
 .activee {
     color: red;
-    
+
 
 }
-.ul-links li a:active{
+
+.ul-links li a:active {
     color: #000;
 }
+
 #myicondiv {
     display: none;
     margin: 0;
@@ -123,13 +126,13 @@ header {
 .section-container {
     width: 80%;
     /*background-color: blueviolet;*/
-    margin: 160px auto;
+    margin: 70px auto 100px auto;
 }
 
 .section-title {
     text-align: center;
 
-    margin: 100px auto 40px auto;
+    margin: 0px auto 30px auto;
 }
 
 .section-title>h2 {
@@ -198,7 +201,7 @@ header {
 #welcome-intro-section {
     display: flex;
     height: 500px;
-    margin: 50px 20px;
+    margin: 50px 20px 70px 20px;
     column-gap: 15px;
 
 
@@ -305,6 +308,40 @@ header {
 
 
 /*---------------- slider container section ------------------*/
+
+
+/******************** bg-banner-img2 section *************************/
+
+#bg-banner-img2-section {
+    width: 100vw;
+    background-color: grey;
+    padding: 30px 150px;
+    background: url(cssfolder/intro-bg.jpg)center/cover no-repeat;
+    margin-top: 130px;
+
+}
+
+.bg-banner-img2-outer-container {
+    margin: 0 50px;
+}
+
+.bg-banner-img2-inner-container-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+
+}
+
+.bg-banner-img2-inner-container-row p {
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    color: white;
+    font-family: cursive;
+
+}
+
 
 /*--------------------------contact-section----------------*/
 .contact-us-headline {
@@ -482,7 +519,7 @@ a {
 
     align-items: center;
     width: 90vw;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 85px auto;
 
 }
 
@@ -599,7 +636,7 @@ a {
 }
 
 .footer-col ul li a {
-    font-size: 16px;
+    font-size:clamp(0.9rem,1vw,1rem);
     color: #ffffff;
     font-weight: 300;
     text-transform: capitalize;
@@ -632,7 +669,7 @@ a {
     background-color: #ffffff;
 }
 
-/*----------------- media queries ---------------------*/
+/*------------------------------------------ media queries ---------------------------------------------*/
 
 @media all and (max-width:995px) {
 
@@ -699,11 +736,18 @@ a {
     }
 
     .section-container {
-        margin: 130px auto 60px auto;
+        margin: 30px auto 30px auto;
     }
 
     .section-title {
         margin: 40px auto 30px;
+    }
+
+    /************#bg-banner-img2-section***********/
+
+    #bg-banner-img2-section {
+
+        margin-top: 100px;
     }
 
 
@@ -807,6 +851,82 @@ a {
     .footer-row div:nth-last-child(-n+2) {
         margin-bottom: 0;
     }
+
+
+}
+
+
+/******************** media queries bg-banner-img2 section *************************/
+@media screen and (max-width:1150px) {
+    #bg-banner-img2-section {
+        padding: 30px 80px;
+    }
+
+    .bg-banner-img2-outer-container {
+        margin: 0 40px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    #bg-banner-img2-section {
+        padding: 30px 50px;
+    }
+
+    .bg-banner-img2-outer-container {
+        margin: 0 30px;
+    }
+
+}
+
+@media screen and (max-width:860px) {
+    #bg-banner-img2-section {
+        padding: 30px 40px;
+    }
+
+    .bg-banner-img2-outer-container {
+        margin: 0 20px;
+    }
+
+    .bg-banner-img2-inner-container-row {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    #bg-banner-img2-section {
+        padding: 30px 15px;
+    }
+
+    .bg-banner-img2-inner-container-row {
+
+        padding: 40px;
+
+    }
+
+    
+
+
+
+}
+
+@media screen and (max-width:300px) {
+    #bg-banner-img2-section {
+        padding: 30px 10px;
+    }
+
+    .bg-banner-img2-outer-container {
+        margin: 0 10px;
+    }
+
+    .bg-banner-img2-inner-container-row {
+
+        padding: 25px;
+
+    }
+
 
 
 }
