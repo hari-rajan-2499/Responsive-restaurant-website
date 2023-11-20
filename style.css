@@ -858,7 +858,7 @@ a {
 
 }
 
-@media all and (max-width:790px) {
+@media all and (max-width:990px) {
     #welcome-intro-section {
 
         flex-wrap: wrap;
