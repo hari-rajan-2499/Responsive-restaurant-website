@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KN Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!------------------------swiper style --------------------------->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!------------------------------- REMIX ICON LINK ------------------------------------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!-------------------------------- BOOSTRAP ---------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-------------------------Contact-section----------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:wght@100&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap:wght@100&family=Ephesis&family=Paytone+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+        #About-section {
+            background: url(cssfolder/about\ section\ bg\ img.jpg)center/cover;
+            width: 100vw;
+            height: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        #About-section::after {
+            content: "";
+            position: absolute;
+            background: black;
+            opacity: 0.3;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #About-section h1 {
+            color: white;
+            margin: 0;
+            z-index: 2;
+            font-size: clamp(2rem,3vw,3rem);
+
+        }
+
+        /* small intro secton */
+
+        #kn-restaurant-age-section {
+            margin:50px 0 100px 0;
+            
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 20px;
+            background: url(cssfolder/Group-3494.jpg)center/cover;
+            padding: 50px 20px 60px 20px;
+        }
+
+        #kn-restaurant-age-section::after {
+            content: "";
+            position: absolute;
+            background: black;
+            opacity: 0.6;
+            width: 100%;
+            height: 100%;
+            top: 0;
+
+        }
+
+        #kn-restaurant-age-section h1,
+        #kn-restaurant-age-section p {
+            text-align: center;
+            line-height: 2.5rem;
+            color: white;
+            margin: 0;
+            z-index: 2;
+
+
+        }
+
+        #kn-restaurant-age-section h1 {
+            text-transform: capitalize;
+            font-size: clamp(1.6rem,3vw,3.5rem);
+            margin: 25px 0 20px 0;
+            font-family: 'Ephesis', cursive;
+            font-weight: 600;
+            word-spacing: 15px;
+
+        }
+
+        #kn-restaurant-age-section p {
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            text-align: center;
+            font-family: monospace;
+        }
+
+        #about-section-stars-icon {
+            color: yellow;
+            z-index: 2;
+        }
+
+        /*** Who We Are Section ***/
+        #who-we-are-section {
+            width: 100vw;
+            background-color: #E8E8E8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: -50px 0 50px 0;
+            padding: 50px 0;
+            gap: 50px;
+        }
+
+        .inner-who-we-are-section {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            
+        }
+
+        .inner-who-we-are-section p {
+            font-size: clamp(1rem, 1.2vw, 1.5rem);
+            text-align: justify;
+            color: #585858;
+            line-height: 2rem;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!----------------------------   Nav Bar Section  ----------------------------------------->
+    <nav class="topnavbar fixed-top">
+        <h1 class="logo" style="cursor: pointer;"><span style="color:red">KN</span> RESTAURANT</h1>
+        <ul class="ul-links">
+            <li><a href="index.html" class="activee f">home</a></li>
+            <li><a href="About Us.html" class="nav-active-style">about us</a></li>
+            <li><a href="contact.html" class="">contact</a></li>
+            <li><a href="order online.html" class="">order online</a></li>
+            <li><a href="outlet.html" class="">outlets</a></li>
+
+        </ul>
+        <div id="myicondiv"><i class="fa-solid fa-bars myiconmenu"></i></div>
+    </nav>
+
+
+    <!---------------------------- About Section  -------------------------------->
+    <div id="About-section">
+        <h1>About Us</h1>
+    </div>
+
+
+    <!-------------------------------------WELCOME SECTION------------------------------------------------------------------------------>
+
+    <div id="welcome-intro-section">
+        <div class="eating-welcome-image">
+            <img src="cssfolder/indian-tamil-man-cartoon-vector-36041698.jpg" alt="">
+        </div>
+        <div class="intro-content">
+            <h2>welcome to <span style="color:red">KN</span> restaurent</h2>
+            <p>Step into a world where impeccable service is not just a commitment, but a tradition. We believe in great
+                service, from the moment you arrive, to the moment you leave you’ll experience our
+                renowned hospitality that is second to none.
+                Offering an extensive choice of traditional Indian cuisine which our customers have been enjoying for
+                the past 10 years.We invite you to indulge in the rich flavors and vibrant spices of South India. Embark
+                on a culinary journey with us, where the aromas of South Indian spices fill the air, and each dish tells
+                a story of authenticity. Our
+                menu features a wide variety of authentic dishes, from crispy dosas to aromatic biryanis. Our chefs use
+                only the freshest ingredients and traditional cooking techniques to create dishes that are sure to
+                tantalize your taste buds. Whether you’re a long-time fan of South Indian cuisine or a first-time
+                visitor, we guarantee that you’ll leave our restaurant feeling satisfied and happy</p>
+        </div>
+    </div>
+
+    <!-------------------------- Small intro for About Section --------------------------------->
+    <div id="kn-restaurant-age-section">
+        <h1>More than 10 years of rich tradition</h1>
+        <p>A new Landmark of Ranipet, born out of passion for delivering healthy, hygienic, quality and tasty food,
+            cooked to perfection.</p>
+
+        <p>The Finest prime kitchen, Exquisite food, genuine service.</p>
+        <p>A Classic Indian Kitchen</p>
+        <div id="about-section-stars-icon">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+    </div>
+
+
+    <!-------------------------- Who we are Section --------------------------------->
+    <div id="who-we-are-section">
+        <div class="inner-who-we-are-section">
+            <h3>Who We Are</h3>
+            <p>Starting with a speciality restaurant in Ahmedabad in 1980, the Group today has more than 150
+                successfully operating restaurants across the globe. It is a highly diversified entity with interests in
+                Hospitality, Packaged Foods, Manufacturing & Distribution, Exports, Hoteliering and Real Estate.</p>
+            <p>Considered as one of the fastest growing companies in India, the Group is spearheaded to becoming a major
+                player in the economic scenario of India. Apart from India, it has a strong presence in countries like
+                USA, Canada, UK, UAE and Australia.</p>
+            <p>Ethical business practices have been our top priority at every step.open work environment that is
+                employee-friendly and socially responsible. It has a team of diligent and proficient individuals, who
+                collectively contribute in developing and delivering the very best.</p>
+        </div>
+
+        <div class="inner-who-we-are-section">
+            <h3>Our Management</h3>
+            <p>Under the sheer dynamism of Mr. Kailash Goenka, Ph.D (CMD), Sankalp has grown from strength to strength.
+                His vision, passion and single-minded dedication are the reason for the recognition, goodwill and
+                popularity The Sankalp Group enjoys today. In the year 2018, Mr. Kailash Goenka, Ph.D, was conferred
+                with rare honour of Doctor of Excellence, Honoris Causa (Hospitality Management) by Young Scientist
+                University, USA. The conferring of Ph.D comes in wake of his tremendous contribution in his field, for
+                his excellent performance, his innate knowledge and business acumen.</p>
+
+            <p>The Group’s retail brands have an international appeal. Today, Sankalp has a strong presence in 7
+                different countries. Its aspirations and motto to offer the very best cuisine and dining experience to
+                as many guests as possible, does not stop there. Mr. Kailash Goenka, Ph.D envisions the opening of more
+                than 500 Restaurants by the end of 2020. Keeping in mind the growth potential of the Brand, the company
+                has constantly innovated and created lucrative opportunities both for businessmen as well as consumers.
+                Today, the growing Sankalp family is an ever growing bond-of-trust.</p>
+
+        </div>
+
+        <div class="inner-who-we-are-section">
+            <h3>Our Biggest Asset</h3>
+            <p>Our Group is a people-oriented company and it strives to create a vibrant and open work environment that is employee-friendly and socially responsible. It has a team of diligent and proficient individuals, who collectively contribute in developing and delivering the very best.  Well-structured training modules are in place to ensure constant honing of skills to meet the dynamic requirements of the industry.The Group’s retail brands have an international appeal. Today, KN Restaurant has a strong presence in 7 different countries.</p>
+            <p>The company has created a culture that emphasizes customer centricity, teamwork, and continuous process improvement. Its global work culture provides opportunities for constant learning and growth. Its aspirations and motto to offer the very best cuisine and dining experience to as many guests as possible, does not stop there. Mr. Kailash Goenka, Ph.D envisions the opening of more than 500 Restaurants by the end of 2020. Keeping in mind the growth potential of the Brand, the company has constantly innovated and created lucrative opportunities both for businessmen as well as consumers. Today, the growing Sankalp family is an ever growing bond-of-trust.</p>
+
+        </div>
+    </div>
+
+
+
+
+    <!-------------------------- Footer Section --------------------------------->
+
+    <footer class="footer-section">
+        <div class="footer-inner-section">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Franchise</a></li>
+                        <li><a href="#">outlet</a></li>
+                        <li><a href="#">our gallery</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment option</a></li>
+                        <li><a href="#">feedback and support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> No. 88, Ars street, mettu thengal,
+                                ranipet - 632404</a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i> Email : knrestaurent@gmail.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-square-phone"></i> ph no : +919500496347</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="myjs.js"></script>
+
+</body>
+
+</html>

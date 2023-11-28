@@ -65,6 +65,24 @@ ul {
     color: #000;
 }
 
+.nav-active-style{
+    position: relative;
+}
+
+.nav-active-style::before{
+    content: "";
+    width: 35px;
+    height: 2px;
+    background-color: crimson;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
 #myicondiv {
     display: none;
     margin: 0;
@@ -648,6 +666,7 @@ a {
 .footer-row {
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .footer-col {

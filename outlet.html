@@ -34,45 +34,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        #location-section {
-            background: url(cssfolder/location\ bg\ img.jpg)center/cover;
-            width: 100vw;
-            height: 600px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 80px;
-        }
-
-        #location-section::before {
-            content: "";
-            position: absolute;
-            background: black;
-            opacity: 0.6;
-            width: 100%;
-            height: 100%;
-
-        }
-        #location-section h1{
-            color: white;
-            margin: 0;
-            z-index: 2;
-            font-size: clamp(2rem,3vw,3rem);
-
-        }
-        #location-in-google-map{
-            width: 80vw;
-            height: 500px;
-            margin: 50px auto;
-
-        }
-        #location-in-google-map iframe{
-            width: 100%;
-            height: 100%;
-            
-
-        }
+        
 
     </style>
 
@@ -87,65 +49,20 @@
         <ul class="ul-links">
             <li><a href="index.html" class="activee f">home</a></li>
             <li><a href="About Us.html" class="">about us</a></li>
-            <li><a href="contact.html" class="nav-active-style">contact</a></li>
+            <li><a href="contact.html" class="">contact</a></li>
             <li><a href="order online.html" class="">order online</a></li>
-            <li><a href="outlet.html" class="">outlets</a></li>
+            <li><a href="outlet.html" class="nav-active-style">outlets</a></li>
 
         </ul>
         <div id="myicondiv"><i class="fa-solid fa-bars myiconmenu"></i></div>
     </nav>
 
-    <!-----------------------------  Location Banner Section ----------------------------------->
-    <div id="location-section">
-       <h1>Location</h1>
-    </div>
-    <div id="location-in-google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d935.2273264664424!2d79.26017226955514!3d12.990334305991475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU5JzI1LjIiTiA3OcKwMTUnMzguOSJF!5e1!3m2!1sen!2sin!4v1701108325464!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div style="height: 50vh; display: flex;align-items: center;justify-content: center;">
+        <h1 style="text-align: center; color: black;margin-top: 80px;">This webpage is under development...</h1>
     </div>
 
-
-    <!---------------------------- contact section -------------------------------->
-    <div class="contact-us-headline">
-        <h1>Contact us</h1>
-    </div>
-    <div id="form-whole-container">
-
-        <div class="contact-footer-col">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-location-dot"></i> No. 88, Ars street, mettu thengal, ranipet -
-                        632404</a></li>
-                <button type="button" class="btnstyle"> Get Direction</button>
-                <li><a href="#"><i class="fa-regular fa-envelope"></i> Email : knrestaurent@gmail.com</a></li>
-                <li><a href="#"><i class="fa-solid fa-square-phone"></i> ph no : +91 9500496347</a></li>
-                <li><a href="#"><i class="fa-solid fa-square-phone"></i> ph no : +91 9751099858</a></li>
-            </ul>
-        </div>
-        <form id="contactForm">
-
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-            </div>
-            <div class="form-group">
-                <label for="location">Location</label>
-                <input type="text" id="location" name="location" placeholder="Location" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Enter Your Message..." required></textarea>
-                <input type="submit" value="Submit" style="margin-bottom: 0;">
-            </div>
-
-        </form>
-    </div>
+    
 
     <!-------------------------- Footer Section --------------------------------->
 
