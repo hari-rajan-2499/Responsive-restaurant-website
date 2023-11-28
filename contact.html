@@ -54,26 +54,39 @@
             height: 100%;
 
         }
-        #location-section h1{
+
+        #location-section h1 {
             color: white;
             margin: 0;
             z-index: 2;
-            font-size: clamp(2rem,3vw,3rem);
+            font-size: clamp(2rem, 3vw, 3rem);
 
         }
-        #location-in-google-map{
+
+        #location-in-google-map {
             width: 80vw;
             height: 500px;
             margin: 50px auto;
 
         }
-        #location-in-google-map iframe{
+
+        #location-in-google-map iframe {
             width: 100%;
             height: 100%;
-            
+
 
         }
 
+        @media screen and (max-width:1000px) {
+            #location-section {
+                height: 100vh;
+            }
+
+            #location-section h1 {
+                margin-bottom: 4rem;
+
+            }
+        }
     </style>
 
 
@@ -97,10 +110,10 @@
 
     <!-----------------------------  Location Banner Section ----------------------------------->
     <div id="location-section">
-       <h1>Location</h1>
+        <h1>Location</h1>
     </div>
     <div id="location-in-google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d935.2273264664424!2d79.26017226955514!3d12.990334305991475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU5JzI1LjIiTiA3OcKwMTUnMzguOSJF!5e1!3m2!1sen!2sin!4v1701108325464!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1870.454970162256!2d79.26115368849943!3d12.990292182941783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad49d9f6ed2fd5%3A0xdf2813a00f016462!2sTFC%20Restaurant!5e1!3m2!1sen!2sin!4v1701198958518!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 
