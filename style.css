@@ -65,19 +65,20 @@ ul {
     color: #000;
 }
 
-.nav-active-style{
+.nav-active-style {
     position: relative;
 }
 
-.nav-active-style::before{
+.nav-active-style::before {
     content: "";
     width: 35px;
     height: 2px;
     background-color: crimson;
+
     position: absolute;
     bottom: -5px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -109,7 +110,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 4rem;
+
 }
 
 .header_content .h33 {
@@ -668,7 +669,7 @@ a {
 .footer-row {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 
 .footer-col {
@@ -746,8 +747,8 @@ a {
 
 @media all and (max-width:995px) {
 
-    header{
-        height: 100vh;
+    header {
+        height: 90vh;
     }
 
     .logo {
@@ -963,14 +964,15 @@ a {
 @media screen and (max-width:1050px) {
     #gravy-img-content-section {
         width: 90vw;
-        
+
 
     }
+
     #welcome-intro-section {
         margin: 30px 20px 20px 20px;
     }
-    
-    
+
+
 
 }
 
