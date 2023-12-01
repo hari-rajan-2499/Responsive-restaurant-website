@@ -16,6 +16,7 @@ li>a {
     text-transform: uppercase;
     /*padding: 30px;*/
     font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 
@@ -770,6 +771,10 @@ a {
         margin-left: -1000px;
         margin-top: auto;
         gap: 0;
+    }
+
+    .ul-links li:last-child {
+        margin-right:0;
     }
 
     .addul {

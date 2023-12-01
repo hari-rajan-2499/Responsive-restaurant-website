@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KN Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!------------------------swiper style --------------------------->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!------------------------------- REMIX ICON LINK ------------------------------------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!-------------------------------- BOOSTRAP ---------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-------------------------Contact-section----------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:wght@100&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        #gallery-section {
+            background: url(cssfolder/gallery-bg-img.jpg)center/cover;
+            width: 100vw;
+            height: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        #gallery-section::before {
+            content: "";
+            position: absolute;
+            background: black;
+            opacity: 0.6;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #gallery-section h1 {
+            color: white;
+            margin: 0;
+            z-index: 2;
+            font-size: clamp(2rem, 3vw, 3rem);
+
+        }
+
+        /** Gallery ing section **/
+        #gallery-imgs-section {
+            width: 80vw;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #gallery-imgs-section h1,
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'remixicon';
+            font-weight: 700;
+        }
+
+        #gallery-imgs-section h1 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            position: relative;
+        }
+
+        #gallery-imgs-section h2 {
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+        }
+
+        #gallery-imgs-section h1::before {
+            content: "";
+            width: 10rem;
+            height: 3px;
+            background-color: crimson;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        #gallery-imgs-section h2 {
+            margin: 20px auto 10px auto;
+        }
+
+
+
+        #gallery-imgs-section button {
+            text-align: center;
+            width: fit-content;
+            margin: 30px auto;
+        }
+
+        #inner-gallery-imgs-container {
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: auto;
+            gap: 50px;
+        }
+
+        #inner-gallery-imgs-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid black;
+            border-width: medium;
+            transition: all 0.8s ease;
+
+
+        }
+
+        #inner-gallery-imgs-container img:hover {
+            opacity: 0.5;
+
+        }
+
+        /************** Media query *************/
+
+        @media screen and (max-width:380px) {
+            #gallery-imgs-section h1 {
+                font-size: clamp(1.1rem, 3vw, 2.5rem);
+                position: relative;
+            }
+
+            #gallery-imgs-section h2 {
+                font-size: clamp(1rem, 2.5vw, 2rem);
+            }
+
+            #gallery-imgs-section button {
+                font-size:0.7rem;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!----------------------------   Nav Bar Section  ----------------------------------------->
+    <nav class="topnavbar fixed-top">
+        <h1 class="logo" style="cursor: pointer;"><span style="color:red">KN</span> RESTAURANT</h1>
+        <ul class="ul-links">
+            <li><a href="index.html" class="activee f">home</a></li>
+            <li><a href="About Us.html" class="">about us</a></li>
+            <li><a href="contact.html" class="">contact</a></li>
+            <li><a href="Gallery.html" class="nav-active-style">Gallery</a></li>
+            <li><a href="order online.html" class="">order online</a></li>
+
+        </ul>
+        <div id="myicondiv"><i class="fa-solid fa-bars myiconmenu"></i></div>
+    </nav>
+
+    <!----------------------------   Background Gallery banner Section  ----------------------------------------->
+    <div id="gallery-section">
+        <h1>Gallery</h1>
+    </div>
+
+
+    <!-----------------------------  Gallery Images Section  ----------------------------------------->
+    <!--<div id="gallery-imgs-section">
+        <h1>Our Signature Dishes</h1>
+        <div id="inner-gallery-imgs-container">
+            <img src="cssfolder/gallery images/veg-items/gall-img-11.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-17.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-5.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-6.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-10.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-12.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-13.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-14.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-15.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-16.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-18.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-19.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-20.png" alt="">
+            <img src="cssfolder/gallery images/gall-img-21.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-21.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-22.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-23.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-24.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-25.jpg" alt="">
+            <img src="cssfolder/gallery images/gall-img-26.jpg" alt="">
+        </div>
+    </div>-->
+
+
+    <div id="gallery-imgs-section">
+        <h1>Our Signature Dishes</h1>
+        <h2 class="gallery-img-heading">Veg Items</h2>
+        <div id="inner-gallery-imgs-container">
+            <img src="cssfolder/veg.jpeg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-8.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/veg meals-2.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/delicious-indian-dosa-composition_23-2149086051.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-11.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/gall-img-23.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/poori.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/indian-tasty-roti-composition_23-2149073358.jpg" alt="">
+
+        </div>
+        <button>View More</button>
+        <h2 class="gallery-img-heading">Non Veg Items</h2>
+        <div id="inner-gallery-imgs-container">
+            <img src="cssfolder/gallery images/non-veg/gall-img-25.jpg" alt="">
+            <img src="cssfolder/gallery images/veg-items/non-veg meals-3.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/gall-img-24.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/pexels-samer-daboul-2233729.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/chiken fry img.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/fish-meal.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/pexels-pixabay-60616.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/fish1.jpg" alt="">
+
+
+        </div>
+        <button>View More</button>
+        <h2 class="gallery-img-heading">Snacks</h2>
+        <div id="inner-gallery-imgs-container">
+            <img src="cssfolder/gallery images/snacks/samosa.jpg" alt="">
+            <img src="cssfolder/gallery images/non-veg/vadai.jpg" alt="">
+
+            <img src="cssfolder/gallery images/snacks/gall-img-29.jpg" alt="">
+            <img src="cssfolder/gallery images/snacks/gall-img-22.jpg" alt="">
+            <img src="cssfolder/gallery images/snacks/juicy-delicious-meat-cutlets-dark-table-russian-cuisine.jpg"
+                alt="">
+            <img src="cssfolder/gallery images/snacks/gall-img-12.jpg" alt="">
+            <img src="cssfolder/gallery images/snacks/gall-img-28.jpg" alt="">
+            <img src="cssfolder/gallery images/snacks/pexels-markus-winkler-3837227.jpg" alt="">
+
+
+        </div>
+        <button>View More</button>
+        <h2 class="gallery-img-heading">Fresh Juice</h2>
+        <div id="inner-gallery-imgs-container">
+            <img src="cssfolder/gallery images/juice/juice.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/gal-img.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/lemon juice.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/strawberry juice2.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/pine apple juice.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/wmelon juice.jpg" alt="">
+
+            <img src="cssfolder/gallery images/juice/orange juice1.jpg" alt="">
+            <img src="cssfolder/gallery images/juice/apple juice2.jpg" alt="">
+
+
+        </div>
+        <button>View More</button>
+    </div>
+
+
+
+
+    <!-------------------------- Footer Section --------------------------------->
+
+    <footer class="footer-section">
+        <div class="footer-inner-section">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Franchise</a></li>
+                        <li><a href="#">outlet</a></li>
+                        <li><a href="#">our gallery</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment option</a></li>
+                        <li><a href="#">feedback and support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> No. 88, Ars street, mettu thengal,
+                                ranipet - 632404</a></li>
+                        <li><a href="#"><i class="fa-regular fa-envelope"></i> Email : knrestaurent@gmail.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-square-phone"></i> ph no : +919500496347</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="myjs.js"></script>
+
+</body>
+
+</html>
