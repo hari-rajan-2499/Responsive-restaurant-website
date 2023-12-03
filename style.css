@@ -142,6 +142,11 @@ header {
     border-radius: 30px;
 
     text-decoration: none;
+    transition: all 0.6s ease;
+}
+
+.ctnn:hover{
+    background-color: brown;
 }
 
 /*section part*/
@@ -377,6 +382,13 @@ button {
     text-align: center;
     margin: 0px;
     font-size: clamp(0.9rem, 1vw, 1rem);
+}
+.mybutton-style{
+    transition: all 1s ease;
+}
+
+.mybutton-style:hover{
+    background-color: brown;
 }
 
 
@@ -633,7 +645,7 @@ a {
     cursor: pointer;
     font-size: clamp(0.6rem, 1vw, 1rem);
     font-weight: 500;
-
+    transition: all 0.6s ease;
 
 }
 
