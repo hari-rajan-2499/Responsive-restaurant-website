@@ -25,7 +25,13 @@ nav_atag.forEach((anchor_tag) => {
 })
 
 
+
+/********************** Slider Tab  *************************/
+
+
+
 /********************* Swiper js  **************************/
+
 let swiperCards = new Swiper('.swipercard-js-style', {
     // Optional parameters
     loop: true,

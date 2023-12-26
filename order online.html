@@ -34,8 +34,363 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap:wght@100&family=Ephesis&family=Jost&family=Paytone+One&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100&family=Roboto:ital,wght@0,100;0,300;1,300;1,400;1,500&family=Rubik+Bubbles&family=Rubik+Doodle+Shadow&family=Rubik+Doodle+Triangles&display=swap');
+
+        #Order-Online-Section {
+            background: url(/cssfolder/order-online-img.jpeg)center/cover;
+            width: 100vw;
+            height: 600px;
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #Order-Online-Section::after {
+            content: '';
+            background: black;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+            position: absolute;
+
+        }
+
+        #Order-Online-Section h1 {
+            color: white;
+            margin: 0;
+            z-index: 2;
+            font-size: clamp(2rem, 3vw, 3rem);
+
+        }
 
 
+        #menu-title {
+            padding: 5rem 0;
+            height: 90px;
+            width: 100vw;
+            position: relative;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+
+        }
+
+        #menu-title h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 6px;
+            font-family: 'Rubik Doodle Triangles';
+            color: black;
+            margin: 0;
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+
+
+        #slider-wrapper-section {
+            width: 58.5vw;
+            display: flex;
+            position: relative;
+            top: 40px;
+            gap: 2rem;
+            margin: 10px auto;
+            padding: 5px;
+            background-color: white;
+            align-items: center;
+            overflow-x: hidden;
+            justify-content: center;
+            border: 1px solid lightgrey;
+        }
+
+        .icon-container {
+            position: absolute;
+            width: 60px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-container i {
+            width: 100%;
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+
+
+        }
+
+        .icon-container i:hover {
+            background-color: grey;
+
+
+        }
+
+        #slider-wrapper-section .left {
+            left: 0;
+            background-color: white;
+
+        }
+
+        #slider-wrapper-section .right {
+            right: 0;
+            background-color: white;
+        }
+
+        .tab-container {
+            display: flex;
+            padding: 0;
+
+            align-items: center;
+            gap: 5px;
+            margin: 0 60px;
+            user-select: none;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .tab-container .tab {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            padding: 10px;
+            background-color: lightgrey;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            white-space: nowrap;
+            border: 1px solid grey;
+
+
+
+        }
+
+        .tab-container .tab:hover {
+
+            background-color: darkgrey;
+
+        }
+
+        .tab-container .tab a {
+            text-transform: capitalize;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+        }
+
+
+        #menu-showing-section {
+            width: 90vw;
+
+            margin: 100px auto 100px auto;
+            /*border: 3px solid #00ABAB;*/
+            padding: 10px 0 60px 0;
+            /*box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .5);*/
+            box-shadow: -5px 0 10px rgba(0, 0, 0, .15);
+
+        }
+
+        .menu-showing-inner-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .menu-heading {
+            padding: 30px;
+            align-self: flex-start;
+            margin-top: 30px;
+
+
+        }
+
+
+
+        .menu-heading h2 {
+            margin: 0;
+            font-size: clamp(1.3rem, 2.5vw, 2.5rem);
+            margin-bottom: 5px;
+            font-family: 'Poppins';
+
+        }
+
+        .Kn-menu-items {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 35px;
+            padding: 0 25px;
+        }
+
+        .kn-menu-item {
+            /*width: 300px;
+            height: 150px;*/
+            width: 300px;
+            height: 150px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            /*padding: 0 15px 0 15px;*/
+            padding: 10px 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+        }
+
+        .kn-menu-item button {
+            cursor: pointer;
+            height: 30px;
+            width: 5rem;
+            position: relative;
+            border-radius: 5px;
+            height: 25px;
+            width: 4rem;
+            position: relative;
+            background-color: teal;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .kn-menu-item button:hover {
+
+            background-color: darkslategrey;
+        }
+
+        .kn-menu-item button a {
+            text-decoration: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 400;
+            font-size: 11px;
+        }
+
+
+
+        .kn-menu-item h3,
+        .kn-menu-item p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .rupee-tag-section {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: self-end;
+            gap: 2px
+        }
+
+        .rupee-tag-section i,
+        .rupee-tag-section p {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .kn-menu-item h3 {
+            align-self: flex-start;
+            font-size: 1.2rem;
+            text-decoration: underline;
+
+        }
+
+        .kn-menu-item h3 a {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            font-weight: 500;
+            line-height: 1.2;
+            color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .kn-menu-item h3 a:hover {
+            color: darkviolet;
+        }
+
+        .kn-menu-item p {
+            font-size: 12px;
+            color: #666;
+            line-height: 16px;
+            text-align: justify;
+            font-weight: 600;
+
+        }
+
+        .rupee-tag-section i {
+
+            font-size: 0.8rem;
+
+
+        }
+
+        .rupee-tag-section p {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+
+        /*  MediaScreen */
+
+        @media screen and (max-width:700px) {
+
+            /* Order Online slider */
+            #slider-wrapper-section {
+                width: 80vw;
+            }
+
+            .tab-container {
+                gap: 8px;
+            }
+
+        }
+
+        @media screen and (max-width:400px) {
+
+            /* Order Online slider */
+            #slider-wrapper-section {
+                width: 60vw;
+            }
+
+            .tab-container {
+                gap: 8px;
+            }
+
+        }
+
+        @media screen and (max-width:500px) {
+            #slider-wrapper-section {
+                width: 90vw;
+            }
+
+            .tab-container {
+
+                scroll-behavior: none;
+                gap: 8px;
+                margin: 0 30px;
+            }
+
+            .icon-container {
+
+                width: 35px;
+
+            }
+
+
+        }
     </style>
 
 
@@ -48,20 +403,1749 @@
         <h1 class="logo" style="cursor: pointer;"><span style="color:red">KN</span> RESTAURANT</h1>
         <ul class="ul-links">
             <li><a href="index.html" class="activee f">home</a></li>
-            <li><a href="About Us.html" class="">about us</a></li>
-            <li><a href="contact.html" class="">contact</a></li>
             <li><a href="Gallery.html" class="">Gallery</a></li>
             <li><a href="order online.html" class="nav-active-style">order online</a></li>
+            <li><a href="About Us.html" class="">about us</a></li>
+            <li><a href="contact.html" class="">contact</a></li>
         </ul>
         <div id="myicondiv"><i class="fa-solid fa-bars myiconmenu"></i></div>
     </nav>
 
 
-    <div style="height: 50vh; display: flex;align-items: center;justify-content: center;">
-        <h1 style="text-align: center; color: black;margin-top: 80px;">This webpage is under development...</h1>
+    <!---------------------------- About Section  -------------------------------->
+    <div id="Order-Online-Section">
+        <h1>Order Online</h1>
     </div>
 
 
+    <!---------------------------- Menu Title  -------------------------------->
+    <div id="menu-title">
+        <h1>MENU</h1>
+    </div>
+
+
+    <!-------------------------------- Slider Tab  -------------------------------->
+    <div id="slider-wrapper-section">
+        <div class="icon-container left"><i id="left" class="fa-solid fa-angle-left" style="left: 0;"></i></div>
+        <ul class="tab-container">
+            <li class="tab" id="BreakFast"><a href="#BreakFast">BreakFast</a></li>
+            <li class="tab"><a href="#Lunch">Lunch</a></li>
+            <li class="tab"><a href="#Dinner">Dinner</a></li>
+            <li class="tab"><a href="#Veg">Veg</a></li>
+            <li class="tab"><a href="#Non-Veg">Non veg</a></li>
+            <li class="tab"><a href="#Soup">Soup</a></li>
+            <li class="tab"><a href="#Biriyani">Biriyani</a></li>
+            <li class="tab"><a href="#Chicken">Chicken</a></li>
+            <li class="tab"><a href="#Parota">Parotta</a></li>
+            <li class="tab"><a href="#Fried-Rice">Fried Rice</a></li>
+            <li class="tab"><a href="#Chettinad-Special">Chettinad spl</a></li>
+            <li class="tab"><a href="#Sea-Food">Sea Foods</a></li>
+            <li class="tab"><a href="#Evening-Snacks">Evening Snacks</a></li>
+            <li class="tab"><a href="#Tea-Coffee">Tea & Coffee</a></li>
+            <li class="tab"><a href="#Fresh-Juice">Fresh Juice</a></li>
+            <li class="tab"><a href="#Ice-Cream">Ice Creams</a></li>
+        </ul>
+        <div class="icon-container right"><i id="right" class="fa-solid fa-angle-right" style="right: 0;"></i></div>
+    </div>
+
+
+
+    <!-------------------------- Menu showing section --------------------------------->
+    <div id="menu-showing-section">
+        <div class="menu-showing-outer-container">
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading" style="margin: 0;">
+                    <h2 style="margin: 0;">BreakFast</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Idly</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>5.00</p>
+                        </div>
+                        <p><strong>Idly:</strong> Enjoy the light and nutritious goodness of our steamed Idly.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Raagi Idly</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Raagi Idly:</strong> Savor the health benefits of Raagi Idly, a wholesome choice made
+                            with finger millet.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Thattu Idly</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Thattu Idly:</strong> Experience the perfect blend of tradition and health with our
+                            Thattu Idly.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Poori</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>12.00</p>
+                        </div>
+                        <p><strong>Poori:</strong> Delight in the crispy perfection of our wholesome Poori.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Vada</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>7.00</p>
+                        </div>
+                        <p><strong>Vada:</strong> Crunch into the protein-packed goodness of our fried Vada.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Pongal</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Pongal:</strong> Savor the comforting and nutritious taste of our Pongal.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Idiyappam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>3.00</p>
+                        </div>
+                        <p><strong>Idiyappam:</strong> Delight in the light and gluten-free goodness of our Idiyappam.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Dosa:</strong> Indulge in the crispy delight of our Dosa, a versatile and healthy
+                            option.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Plain Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Plain Dosa:</strong> Experience the simplicity and health benefits of our Plain Dosa.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Masala Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>40.00</p>
+                        </div>
+                        <p><strong>Masala Dosa:</strong> Treat your taste buds to the flavorful goodness of our Masala
+                            Dosa.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Onion Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Onion Dosa:</strong> Enjoy the savory crunch of our Onion Dosa, a delicious and
+                            wholesome choice.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>20.00</p>
+                        </div>
+                        <p><strong>Egg Dosa:</strong> Satisfy your cravings with the protein-packed goodness of our Egg
+                            Dosa.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Upma</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Upma:</strong> Start your day right with the hearty and nutritious Upma.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Sambar Vada</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Sambar Vada:</strong> Dive into the perfect combination of crispy Vada and flavorful
+                            Sambar.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Uthappam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>8.00</p>
+                        </div>
+                        <p id="Lunch"><strong>Uthappam:</strong> Experience the unique and wholesome taste of our
+                            Uthappam.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Lunch</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">White rice Meals</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>White rice meals:</strong> Enjoy a light and nutritious white rice meal, simple and
+                            wholesome.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Non-Veg Meals</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Non-Veg Meals:</strong> Savor the richness of our non-vegetarian meal, hearty and
+                            satisfying.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Tomato Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Tomato Rice:</strong> Delight in the tradition and health of our aromatic Tomato
+                            Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Veg Biriyani Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>40.00</p>
+                        </div>
+                        <p><strong>Veg Biriyani Rice:</strong> Crispy perfection in our vegetarian biryani rice, a
+                            flavorful delight.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Sambar Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Sambar Rice:</strong> Crunch into protein-packed goodness with our Sambar Rice.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Lemon Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Lemon Rice:</strong> Savor comforting and nutritious Lemon Rice, zesty and aromatic.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Curd Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Curd Rice:</strong> Delight in the light and gluten-free goodness of Curd Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Egg Rice:</strong> Indulge in the crispy delight of Egg Rice, a versatile
+                            protein-rich dish.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Chicken Rice: </strong> Experience simplicity and health with our Chicken Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Veg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Veg Rice: </strong> Treat your taste buds to flavorful Veg Rice with assorted
+                            vegetables.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Parota: </strong> Enjoy the savory crunch of Parota, a delightful choice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>20.00</p>
+                        </div>
+                        <p><strong>Egg Parota: </strong> Satisfy cravings with protein-packed Egg Parota.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Kothu Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Kothu Parota: </strong> Start your day right with hearty and nutritious Kothu Parota.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">wheat Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Wheat Parota: </strong> Dive into crispy Wheat Parota with flavorful Sambar.</p>
+                        <button><a>order</a></button>
+
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Chicken Biriyani: </strong> Experience unique and wholesome Chicken Biryani.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Mutton Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>150.00</p>
+                        </div>
+                        <p><strong>Mutton Biriyani: </strong> Revel in the unique and wholesome taste of Mutton Biryani.
+                        </p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Pakoda</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p id="Dinner"><strong>Chicken Pakoda: </strong> Delight in the crispy goodness of Chicken
+                            Pakoda.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Dinner</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Idly</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>5.00</p>
+                        </div>
+                        <p><strong>Idly:</strong> Enjoy the light and nutritious goodness of our steamed Idly.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Idiyappam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>3.00</p>
+                        </div>
+                        <p><strong>Idiyappam:</strong> Delight in the light and gluten-free goodness of our Idiyappam.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Dosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Dosa:</strong> Indulge in the crispy delight of our Dosa, a versatile and healthy
+                            option.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Omelette</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Egg Omelette:</strong> Savor our rich and savory Egg Omelette, a perfect evening
+                            indulgence.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Chicken Rice: </strong> Experience simplicity and health with our Chicken Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Veg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Veg Rice: </strong> Treat your taste buds to flavorful Veg Rice with assorted
+                            vegetables.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Parota: </strong> Enjoy the savory crunch of Parota, a delightful choice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Kothu Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Kothu Parota: </strong> Start your day right with hearty and nutritious Kothu Parota.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Pakoda</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p id="Veg"><strong>Chicken Pakoda: </strong> Delight in the crispy goodness of Chicken Pakoda.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Veg</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Idiyappam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>3.00</p>
+                        </div>
+                        <p><strong>Idiyappam:</strong> Delight in the light and gluten-free goodness of our Idiyappam.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Vegetable Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>3.00</p>
+                        </div>
+                        <p><strong>Vegetable Soup:</strong> Delight in the goodness of ournourishing Veg Soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Tomato Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Tomato Rice:</strong> Delight in the tradition and health of our aromatic Tomato
+                            Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">White rice Meals</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>White rice meals:</strong> Enjoy a light and nutritious white rice meal, simple and
+                            wholesome.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Sambar Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Sambar Rice:</strong> Crunch into protein-packed goodness with our Sambar Rice.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Lemon Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Lemon Rice:</strong> Savor comforting and nutritious Lemon Rice, zesty and aromatic.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Curd Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Curd Rice:</strong> Delight in the light and gluten-free goodness of Curd Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Upma</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Upma:</strong> Start your day right with the hearty and nutritious Upma.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Sambar Vada</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Sambar Vada:</strong> Dive into the perfect combination of crispy Vada and flavorful
+                            Sambar.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Uthappam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>8.00</p>
+                        </div>
+                        <p id="Non-Veg"><strong>Uthappam:</strong> Experience the unique and wholesome taste of our
+                            Uthappam.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Non Veg</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Non-Veg White Rice Meals</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Non-Veg White Rice Meals:</strong> Savor meaty delights a hearty non-vegetarian
+                            treat.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Chicken Biriyani: </strong> Experience unique and wholesome Chicken Biryani.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Mutton Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>150.00</p>
+                        </div>
+                        <p><strong>Mutton Biriyani: </strong> Revel in the unique and wholesome taste of Mutton Biryani.
+                        </p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Pakoda</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Chicken Pakoda: </strong> Delight in the crispy goodness of Chicken Pakoda.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Chicken Soup:</strong> Warm your soul with the goodness of our flavorful
+                            Chicken Soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Mutton Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Mutton Soup:</strong> Indulge in the rich and hearty taste of our nourishing Mutton
+                            Soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Egg Rice:</strong> Indulge in the crispy delight of Egg Rice, a versatile
+                            protein-rich dish.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Chicken Rice: </strong> Experience simplicity and health with our Chicken Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Parota: </strong> Enjoy the savory crunch of Parota, a delightful choice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>20.00</p>
+                        </div>
+                        <p><strong>Egg Parota: </strong> Satisfy cravings with protein-packed Egg Parota.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Kothu Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Kothu Parota: </strong> Start your day right with hearty and nutritious Kothu Parota.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">wheat Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p id="Soup"><strong>Wheat Parota: </strong> Dive into crispy Wheat Parota with flavorful
+                            Sambar.</p>
+                        <button><a>order</a></button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Soup</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Chicken Soup:</strong> Warm your soul with the goodness of our flavorful
+                            Chicken Soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Mutton Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Mutton Soup:</strong> Indulge in the rich and hearty taste of our nourishing Mutton
+                            Soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Vegetable Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Vegetable Soup:</strong>Indulge your senses with the wholesome delight of our
+                            vegetable soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Rasam</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Rasam:</strong> Experience the tangy and aromatic burst of flavors in our traditional
+                            Rasam.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Crab Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Crab Soup:</strong> Dive into the exquisite taste of our crab soup.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Prawn Soup</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>35.00</p>
+                        </div>
+                        <p id="Biriyani"><strong>Prawn Soup:</strong> Delight in the succulent and flavorful prawn soup.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Biriyani</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Chicken Biriyani: </strong> Experience unique and wholesome Chicken Biryani.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Mutton Biriyani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>150.00</p>
+                        </div>
+                        <p><strong>Mutton Biriyani: </strong> Revel in the unique and wholesome taste of Mutton Biryani.
+                        </p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Fish Biryani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Fish Biryani:</strong> Experience a delightful blend of spices and succulent fish.
+                        </p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Hyderabad Biryani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>150.00</p>
+                        </div>
+                        <p><strong>Hyderabad Biryani:</strong> A regal blend of fragrant basmati rice and authentic
+                            spices.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Kozhikode Biryani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>120.00</p>
+                        </div>
+                        <p id="Chicken"><strong>Kozhikode Biryani:</strong> Fragrant rice, spiced meat savor unique
+                            flavors.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Chicken</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">chicken Pakoda</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Chicken Pakoda: </strong> Delight in the crispy goodness of Chicken Pakoda.</p>
+                        <button><a>order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Curry</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>120.00</p>
+                        </div>
+                        <p><strong>Chicken Curry:</strong> Spiced South Indian curry with tender chicken.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Chettinad</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>160.00</p>
+                        </div>
+                        <p><strong>Chicken Chettinad:</strong> Spicy Tamil Nadu chicken with authentic masala.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Fry</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>140.00</p>
+                        </div>
+                        <p><strong>Chicken Fry:</strong> Crispy, deep-fried marinated chicken.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Masala</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>130.00</p>
+                        </div>
+                        <p><strong>Chicken Masala:</strong> Aromatic, spicy chicken in South Indian masala.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Korma</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>180.00</p>
+                        </div>
+                        <p><strong>Chicken Korma:</strong> Mild, creamy chicken curry with yogurt and nuts.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Andhra Chicken Curry</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>150.00</p>
+                        </div>
+                        <p><strong>Andhra Chicken Curry:</strong> Fiery curry with chilies, curry leaves, and mustard
+                            seeds.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Pepper Chicken Fry</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>160.00</p>
+                        </div>
+                        <p><strong>Pepper Chicken Fry:</strong> Sautéed chicken with pepper and garlic for a spicy kick.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken 65</a></h3>
+                        <div class="rupee-tag-section"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>170.00</p>
+                        </div>
+                        <p id="Parota"><strong>Chicken 65:</strong> Crunchy, bite-sized chicken, marinated and
+                            deep-fried.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Parota</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Parota: </strong> Enjoy the savory crunch of Parota, a delightful choice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>20.00</p>
+                        </div>
+                        <p><strong>Egg Parota: </strong> Satisfy cravings with protein-packed Egg Parota.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Kothu Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Kothu Parota: </strong> Start your day right with hearty and nutritious Kothu Parota.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">wheat Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Wheat Parota: </strong> Dive into crispy Wheat Parota with flavorful Sambar.</p>
+                        <button><a>order</a></button>
+
+
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Kerala Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>18.00</p>
+                        </div>
+                        <p><strong>Kerala Parota:</strong> Soft, flaky delight from Kerala, created uniquely.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Malabar Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>22.00</p>
+                        </div>
+                        <p><strong>Malabar Parota:</strong> Crispy, flaky flatbread from Malabar, Kerala, perfect with
+                            curry.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Chilli Parota</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>18.00</p>
+                        </div>
+                        <p id="Fried-Rice"><strong>Chilli Parota:</strong> Spicy delight with green chilies, ideal with
+                            raita or curry.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Fried Rice</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Egg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Egg Rice:</strong> Indulge in the crispy delight of Egg Rice, a versatile
+                            protein-rich dish.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chicken Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Chicken Rice: </strong> Experience simplicity and health with our Chicken Rice.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Veg Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p><strong>Veg Rice: </strong> Treat your taste buds to flavorful Veg Rice with assorted
+                            vegetables.</p>
+                        <button><a>order</a></button>
+
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Prawn Fried Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>90.00</p>
+                        </div>
+                        <p><strong>Prawn Fried Rice:</strong> Seafood delight with succulent prawns and spices.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Mushroom Fried Rice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>75.00</p>
+                        </div>
+                        <p id="Chettinad-Special"><strong>Mushroom Fried Rice:</strong> Vegetarian delight with the
+                            earthy flavor of mushrooms.
+                        </p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Chettinad Special</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Chicken Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Chettinad Chicken Curry:</strong> Spicy chicken with unique Chettinad spices.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Mutton Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>120.00</p>
+                        </div>
+                        <p><strong>Chettinad Mutton Curry:</strong> Spicy goat meat in Chettinad masala.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Fish Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>120.00</p>
+                        </div>
+                        <p><strong>Chettinad Fish Curry:</strong> Fish in tangy Chettinad spice mix.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Egg Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>70.00</p>
+                        </div>
+                        <p><strong>Chettinad Egg Curry:</strong> Boiled eggs in spicy Chettinad masala.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Pepper Chicken</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>90.00</p>
+                        </div>
+                        <p><strong>Chettinad Pepper Chicken:</strong> Peppery chicken with spices.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Chicken Chukka</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>90.00</p>
+                        </div>
+                        <p><strong>Chettinad Chicken Chukka:</strong> Dry and spicy sautéed chicken.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="">Chettinad Atho</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>60.00</p>
+                        </div>
+                        <p id="Sea-Food"><strong>Chettinad Atho:</strong> Street food with flattened rice and Chettinad
+                            spices.</p>
+                        <button><a>order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Sea Food</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Meen Kuzhambu</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Meen Kuzhambu:</strong> Tangy and spicy fish curry with tamarind and spices.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Chettinad Fish Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>90.00</p>
+                        </div>
+                        <p><strong>Chettinad Fish Curry:</strong> Fish in a spicy and aromatic Chettinad spice blend.
+                        </p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Fish Moilee</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>70.00</p>
+                        </div>
+                        <p><strong>Fish Moilee:</strong> Mild and coconut-based fish curry with turmeric and curry
+                            leaves.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Prawn Masala</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>65.00</p>
+                        </div>
+                        <p><strong>Prawn Masala:</strong> Prawns cooked in rich masala with onions and tomatoes.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Squid Fry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>90.00</p>
+                        </div>
+                        <p><strong>Squid Fry:</strong> Crispy calamari marinated with aromatic spices.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Fish Fry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Fish Fry:</strong> Crispy, deep-fried fish in a spicy masala coating.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Crab Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Crab Curry:</strong> Spicy and tangy curry with coconut milk-infused crab.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Prawn Biryani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>70.00</p>
+                        </div>
+                        <p><strong>Prawn Biryani:</strong> Flavorful rice with marinated prawns cooked to perfection.
+                        </p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Fish Biryani</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>100.00</p>
+                        </div>
+                        <p><strong>Fish Biryani:</strong> Biryani with marinated fish for a delectable taste.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Kerala Fish Curry</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>120.00</p>
+                        </div>
+                        <p><strong>Kerala Fish Curry:</strong> Coconut-based fish curry with a perfect spice balance.
+                        </p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Karimeen Pollichathu</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>110.00</p>
+                        </div>
+                        <p id="Evening-Snacks"><strong>Karimeen Pollichathu:</strong> Pearl spot fish in banana leaves,
+                            grilled or
+                            shallow-fried.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Evening Snacks</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Samosa</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>8.00</p>
+                        </div>
+                        <p><strong>Samosa:</strong> Spiced potato-filled pastries, a crunchy South Indian favorite.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Bajji</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>5.00</p>
+                        </div>
+                        <p><strong>Bajji:</strong> Crispy, gram flour-coated veggies for a flavorful snack.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Bonda</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>5.00</p>
+                        </div>
+                        <p><strong>Bonda:</strong> Soft, spiced dumplings in gram flour coating.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Murukku</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>5.00</p>
+                        </div>
+                        <p><strong>Murukku:</strong> Crunchy rice and lentil spirals with spices.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Soondal</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Soondal:</strong> Lentils seasoned with coconut, mustard seeds, and curry leaves.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Egg Puffs</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Egg Puffs:</strong> Puff pastry with spiced eggs, a savory treat.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Veg Puffs</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>12.00</p>
+                        </div>
+                        <p><strong>Veg Puffs:</strong> Buttery pastry pockets with spiced veggies.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Paani Poori</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p id="Tea-Cofee"><strong>Paani Poori:</strong> Tangy tamarind water-filled puris with potatoes
+                            and spices.</p>
+                        <button><a href="#">order</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Tea & Coffee</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Tea</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Tea:</strong> Infused dried tea leaves, a comforting warmth in a cup.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Coffee</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Coffee:</strong> Richly brewed from roasted beans, a bold and energizing sip.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Sukku Coffee</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Sukku Coffee:</strong> Aromatic South Indian blend with dried ginger.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Milk</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Milk:</strong> Nutrient-packed liquid from mammals, a creamy indulgence.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Green Tea</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>10.00</p>
+                        </div>
+                        <p><strong>Green Tea:</strong> Delicate and refreshing, unoxidized tea leaves in a cup.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Ginger Tea</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Ginger Tea:</strong> Warming and spicy, a soothing ginger-infused delight.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Nattu Sarkarai Tea</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Nattu Sarkarai Tea:</strong> Traditional tea sweetened with natural jaggery.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Lemon Tea</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>12.00</p>
+                        </div>
+                        <p id="Fresh-Juice"><strong>Lemon Tea:</strong> Zesty and refreshing, a citrusy tea infusion.
+                        </p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Fresh Juice</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Lemon Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>15.00</p>
+                        </div>
+                        <p><strong>Lemon Juice:</strong> A zesty burst of citrus freshness.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Orange Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Orange Juice:</strong> Sun-kissed sweetness with a tangy twist.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Pomegranate Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Pomegranate Juice:</strong> Antioxidant-rich elixir, sweet and tart.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Grapes Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Grapes Juice:</strong> Nature's candy in a sip, juicy and sweet.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Guava Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>20.00</p>
+                        </div>
+                        <p><strong>Guava Juice:</strong> Tropical delight, bursting with sweetness.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Apple Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>40.00</p>
+                        </div>
+                        <p><strong>Apple Juice:</strong> Crisp and sweet, a classic fruity sip.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Watermelon Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p><strong>Watermelon Juice:</strong> Refreshing hydration with a hint of sweetness.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Mango Juice</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>25.00</p>
+                        </div>
+                        <p id="Ice-Cream"><strong>Mango Juice:</strong> Luscious tropical escape in every sip.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="menu-showing-inner-container">
+                <div class="menu-heading">
+                    <h2 style="margin: 0;">Ice Cream</h2>
+                </div>
+
+                <div class="Kn-menu-items">
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Mango Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>40.00</p>
+                        </div>
+                        <p><strong>Mango Ice Cream:</strong> Creamy blend of ripe mango sweetness.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Strawberry Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>45.00</p>
+                        </div>
+                        <p><strong>Strawberry Ice Cream:</strong> Velvety delight of handpicked strawberries.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Badam Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>50.00</p>
+                        </div>
+                        <p><strong>Badam Ice Cream:</strong> Rich, nutty almond perfection.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Chocolate Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>65.00</p>
+                        </div>
+                        <p><strong>Chocolate Ice Cream:</strong> Decadent, smooth chocolate indulgence.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Dry Fruit Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>80.00</p>
+                        </div>
+                        <p><strong>Dry Fruit Ice Cream:</strong> Luxurious mix of creamy texture and crunchy dry fruits.
+                        </p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Grape Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>35.00</p>
+                        </div>
+                        <p><strong>Grape Ice Cream:</strong> Fruity swirl of frozen grapes delighting your taste buds.
+                        </p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+                    <div class="kn-menu-item">
+                        <h3><a href="#">Vanilla Ice Cream</a></h3>
+                        <div class="rupee-tag-section">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <p>30.00</p>
+                        </div>
+                        <p><strong>Vanilla Ice Cream:</strong> Classic creamy vanilla perfection in every scoop.</p>
+                        <button><a href="#">Order</a></button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+    </div>
 
     <!-------------------------- Footer Section --------------------------------->
 
@@ -119,6 +2203,45 @@
     </footer>
 
     <script src="myjs.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabscon = document.querySelector(".tab-container");
+            const arrowIcons = document.querySelectorAll(".icon-container i");
+
+            arrowIcons.forEach(iconn => {
+                iconn.addEventListener("click", () => {
+
+                    /*tabscon.scrollLeft += iconn.id === 'left' ? -100 : 100;*/
+
+                    const scrollAmount = window.innerWidth <= 500 ? (iconn.id === 'left' ? -100 : 100) : (iconn.id === 'left' ? -250 : 250);
+                    tabscon.scrollLeft += scrollAmount;
+                })
+            })
+
+            let isdragging = false;
+            const dragging = (e) => {
+                if (!isdragging) return;
+                tabscon.scrollLeft -= e.movementX;
+            }
+
+            const dragstop = () => {
+                isdragging = false;
+
+            }
+
+            tabscon.addEventListener("mousedown", () => isdragging = true);
+            tabscon.addEventListener("mousemove", dragging);
+            document.addEventListener("mouseup", dragstop);
+
+
+        });
+
+
+
+
+
+
+    </script>
 
 </body>
 
