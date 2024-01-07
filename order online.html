@@ -352,7 +352,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 998;
             transition: opacity 0.5s ease-in-out;
-            
+
 
         }
 
@@ -2328,50 +2328,55 @@
             let popup_cancel_icon = document.querySelector(".login-heading-and-cancelicon-section i")
             let popup_show = document.querySelector("#popup-showing-container")
             let popup_overlay = document.querySelector("#overlay")
+           
 
 
             function showpopupDelayed() {
+
                 setTimeout(() => {
                     show_popup_function()
 
-                }, 3000)
+                }, 5000);
+
 
             }
 
+
+
             function show_popup_function() {
                 popup_show.style.display = "flex";
-
-
-                popup_overlay.style.display='block';
-                popup_show.style.opacity=1;
+                popup_overlay.style.display = 'block';
+                popup_show.style.opacity = 1;
 
                 setTimeout(() => {
                     popup_overlay.style.opacity = 1;
                 }, 10)
 
+
             }
+
+
+
 
 
             popup_cancel_icon.addEventListener("click", () => {
                 popup_overlay.style.opacity = 0;
-                setTimeout(()=>{
+                setTimeout(() => {
                     popup_show.style.display = "none";
-                
+
                     popup_overlay.style.display = "none"
                     popup_overlay.style.opacity = 0;
 
-                },100)
-
-                
-
-
-
+                }, 100)
 
             });
 
             window.onload = () => {
+
                 showpopupDelayed()
             }
+
+
 
 
 
@@ -2408,10 +2413,6 @@
 
 
         });
-
-
-
-
 
 
     </script>
