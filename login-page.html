@@ -303,9 +303,9 @@
         <div class="login-outer-container">
             <div class="login-inner-container login">
                 <h5 class="login-title">Login</h5>
-                <form action="#">
+                <form action="#" id="login-form">
                     <div class="input-container">
-                        <input type="email" placeholder="Enter Your Email" required>
+                        <input type="email" placeholder="Enter Your Email" name="email" required>
                         <i class="fa-regular fa-envelope input-icon"></i>
                     </div>
 
@@ -324,7 +324,7 @@
                     </div>
 
                     <div class="input-container button">
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Login" onclick="clearinputfields()" id="clearinput-id">
                     </div>
                 </form>
                 <div class="login-signup-container">
@@ -339,14 +339,14 @@
             <!---- Signup Registration Section-->
             <div class="login-inner-container signup">
                 <h5 class="login-title">Registration</h5>
-                <form action="">
+                <form action="#" id="signup-form">
                     <div class="input-container">
-                        <input type="text" placeholder="Enter Your Name" required>
+                        <input type="text" placeholder="Enter Your Name" name="name" required>
                         <i class="fa-solid fa-user"></i>
                     </div>
 
                     <div class="input-container">
-                        <input type="email" placeholder="Enter Your Email" required>
+                        <input type="email" placeholder="Enter Your Email" name="email" required>
                         <i class="fa-regular fa-envelope input-icon"></i>
                     </div>
 
@@ -371,7 +371,7 @@
                     </div>
 
                     <div class="input-container button">
-                        <input type="button" value="Login">
+                        <input type="submit" value="Login" onclick="clearinputfields()" id="clearinput-id">
                     </div>
                 </form>
                 <div class="login-signup-container">
@@ -431,6 +431,12 @@
         login.addEventListener("click", () => {
             Loginsection.classList.remove("active")
         })
+
+        function clearinputfields(){
+            document.getElementById("login-form").reset();
+            document.getElementById("signup-form").reset();
+            
+        }
 
 
     </script>
