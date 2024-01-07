@@ -16,7 +16,7 @@ li>a {
     text-transform: uppercase;
     /*padding: 30px;*/
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 
@@ -599,6 +599,105 @@ a {
 }
 
 
+/* order online signup section*/
+
+.order-online-signup-box {
+    position: relative;
+}
+
+.order-online-signup-box .signup-box-li-container {
+    display: none;
+}
+
+.order-online-signup-box:hover .signup-box-li-container {
+    display: block;
+    position: absolute;
+    background-color: lightgrey;
+    height: 110px;
+    width: 200px;
+    left: 48%;
+    top: 135%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.signup-box-li-container {
+    display: block;
+    position: absolute;
+    background-color: lightgrey;
+    height: 110px;
+    width: 200px;
+    left: 48%;
+    top: 135%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.order-online-signup-box i {
+
+    bottom: 3px;
+    right: -18px;
+    font-size: 19px;
+}
+
+.signup-box-li-container i {
+    position: absolute;
+    top: -19px;
+    font-size: 35px;
+    right: 38px;
+    color: lightgrey;
+
+}
+
+.signup-box-li-container a input, .popup-signup-box-li-container a input {
+    width: 100%;
+    background-color: steelblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    width: 100%;
+}
+
+.signup-box-li-container input:hover, .popup-signup-box-li-container input:hover{
+
+    color: white;
+    cursor: pointer;
+    background-color: #265df2;
+}
+
+.signup-box-li-container .sign-in-new-customer, .popup-signup-box-li-container .sign-in-new-customer {
+    display: flex;
+    align-items: baseline;
+    column-gap: 3px;
+}
+
+.sign-in-new-customer span, .popup-signup-box-li-container .sign-in-new-customer span {
+    font-size: 13px;
+}
+
+.sign-in-new-customer a, .popup-signup-box-li-container .sign-in-new-customer a {
+    text-decoration: none;
+    text-transform: none;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.sign-in-new-customer a:hover, .signup-box-li-container .sign-in-new-customer a:hover {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+
+}
+
+
 
 /************************* #north-indian-food-section *****************************/
 #north-indian-food-section {
@@ -809,6 +908,15 @@ a {
         background-color: darkslategray;
     }
 
+    .order-online-signup-box:hover .signup-box-li-container {
+        height: 110px;
+        width: 200px;
+        left: 49%;
+        top: 95%;
+        z-index: 5;
+        transform: translateX(-50%);
+    }
+
     #myicondiv {
         display: block;
         position: absolute;
@@ -937,7 +1045,7 @@ a {
         margin-bottom: 0;
     }
 
-    
+
 
 }
 
