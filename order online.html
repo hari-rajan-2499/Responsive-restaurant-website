@@ -2325,10 +2325,11 @@
 
             /* login popup cancel section */
 
-            let popup_cancel_icon = document.querySelector(".login-heading-and-cancelicon-section i")
-            let popup_show = document.querySelector("#popup-showing-container")
-            let popup_overlay = document.querySelector("#overlay")
-           
+            let popup_cancel_icon = document.querySelector(".login-heading-and-cancelicon-section i");
+            let popup_show = document.querySelector("#popup-showing-container");
+            let popup_overlay = document.querySelector("#overlay");
+            let menu_item_buttons = document.querySelectorAll(".kn-menu-item button");
+
 
 
             function showpopupDelayed() {
@@ -2337,6 +2338,7 @@
                     show_popup_function()
 
                 }, 5000);
+
 
 
             }
@@ -2371,17 +2373,34 @@
 
             });
 
+
+
+
+
+
+            /************* Menu-Items_js ************/
+            menu_item_buttons.forEach((menu_item) => {
+                menu_item.addEventListener("click", show_popup_function)
+            })
+
+
+
+
+
+
             window.onload = () => {
 
                 showpopupDelayed()
             }
 
+           
 
 
 
 
 
 
+            /******** Slider wrapper *********/
 
             const tabscon = document.querySelector(".tab-container");
             const arrowIcons = document.querySelectorAll(".icon-container i");

@@ -323,8 +323,9 @@
                         <a href="#" class="text">Forget Password?</a>
                     </div>
 
-                    <div class="input-container button">
-                        <input type="submit" value="Login" onclick="clearinputfields()" id="clearinput-id">
+                    <div class="input-container button login-button">
+                        <input type="submit" value="Login" onclick="login_clearinputfields()" id="click-alert"
+                            class="login-submit">
                     </div>
                 </form>
                 <div class="login-signup-container">
@@ -351,13 +352,13 @@
                     </div>
 
                     <div class="input-container">
-                        <input type="password" class="password" placeholder="Create Your password" required>
+                        <input type="password" class="password p" placeholder="Create Your password" required>
                         <i class="fa-solid fa-lock input-icon"></i>
 
                     </div>
 
                     <div class="input-container">
-                        <input type="password" class="password" placeholder="Confirm Your password" required>
+                        <input type="password" class="password cpassword" placeholder="Confirm Your password" required>
                         <i class="fa-solid fa-lock input-icon"></i>
                         <i class="fa-regular fa-eye-slash show-eye-pw"></i>
                     </div>
@@ -370,13 +371,14 @@
                         <a href="#" class="text">Forget Password?</a>
                     </div>
 
-                    <div class="input-container button">
-                        <input type="submit" value="Login" onclick="clearinputfields()" id="clearinput-id">
+                    <div class="input-container button sign-up-button">
+                        <input type="submit" value="Sign Up" onclick="signup_clearinputfields()" id="click-alert"
+                            class="sign-up-submit">
                     </div>
                 </form>
                 <div class="login-signup-container">
-                    <span class="text">Not a Member?
-                        <a href="#" class="text login-link">Signup Now</a>
+                    <span class="text">Already a Member?
+                        <a href="#" class="text login-link">Login Now</a>
                     </span>
                 </div>
 
@@ -392,51 +394,105 @@
 
 
     <script>
-        const Loginsection = document.querySelector('#Login-section'),
-            pwshowhide = document.querySelectorAll(".show-eye-pw"),
-            pwfields = document.querySelectorAll(".password");
-        signup = document.querySelector(".signup-link");
-        login = document.querySelector(".login-link");
+        document.addEventListener("DOMContentLoaded", () => {
+            const Loginsection = document.querySelector('#Login-section'),
+                pwshowhide = document.querySelectorAll(".show-eye-pw"),
+                pwfields = document.querySelectorAll(".password");
+            let signup = document.querySelector(".signup-link");
+            let login = document.querySelector(".login-link");
+            const form1 = document.querySelector('#login-form');
+            const form2 = document.querySelector('#signup-form')
 
 
-        // js code for show/hide password and icon change
 
-        pwshowhide.forEach(eyeicon => {
-            eyeicon.addEventListener("click", () => {
-                pwfields.forEach(pwfield => {
-                    if (pwfield.type === "password") {
-                        pwfield.type = "text";
-                        console.log('clicked')
 
-                        pwshowhide.forEach(icon => {
-                            icon.classList.replace("fa-eye-slash", "fa-eye")
-                        })
 
-                    } else {
-                        pwfield.type = "password";
-                        pwshowhide.forEach(icon => {
-                            icon.classList.replace("fa-eye", "fa-eye-slash")
-                        })
-                    }
+            // js code for show/hide password and icon change
+
+            pwshowhide.forEach(eyeicon => {
+                eyeicon.addEventListener("click", () => {
+                    pwfields.forEach(pwfield => {
+                        if (pwfield.type === "password") {
+                            pwfield.type = "text";
+                            console.log('clicked')
+
+                            pwshowhide.forEach(icon => {
+                                icon.classList.replace("fa-eye-slash", "fa-eye")
+                            })
+
+                        } else {
+                            pwfield.type = "password";
+                            pwshowhide.forEach(icon => {
+                                icon.classList.replace("fa-eye", "fa-eye-slash")
+                            })
+                        }
+                    })
                 })
             })
+
+
+
+
+
+            /* login form submission */
+
+            form1.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const all_inputs_filled = Array.from(form1.elements).filter((element) => element.type !== 'password').every((element) => {
+                    return element.value.trim() !== ''
+                });
+                console.log(all_inputs_filled)
+
+                form1.reset();
+                setTimeout(() => {
+                    window.location.href = "order online.html"; // Replace with the actual URL
+                }, 500);
+
+
+            });
+
+
+
+            /* signup form submission */
+
+            form2.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const all_inputs_filled = Array.from(form2.elements).filter((element) => element.type !== 'password').every((element) => {
+                    return element.value.trim() !== ''
+                });
+                console.log(all_inputs_filled)
+
+                setTimeout(() => {
+                    window.location.href = "order online.html"; // Replace with the actual URL
+                }, 500);
+
+            });
+
+
+
+
+
+            // js code to appear signup and login form
+
+            signup.addEventListener("click", () => {
+                Loginsection.classList.add("active")
+
+            })
+
+            login.addEventListener("click", () => {
+                Loginsection.classList.remove("active")
+            })
+
+
+
+
+
+
+
+
         })
-
-        // js code to appear signup and login form
-
-        signup.addEventListener("click", () => {
-            Loginsection.classList.add("active")
-        })
-
-        login.addEventListener("click", () => {
-            Loginsection.classList.remove("active")
-        })
-
-        function clearinputfields(){
-            document.getElementById("login-form").reset();
-            document.getElementById("signup-form").reset();
-            
-        }
 
 
     </script>

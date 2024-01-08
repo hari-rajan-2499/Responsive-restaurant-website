@@ -54,99 +54,7 @@
             right: 4vw;
         }
 
-
-        /* order online signup section*/
-
-        /*.order-online-signup-box {
-            position: relative;
-        }
-
-        .order-online-signup-box .signup-box-li-container {
-            display: none;
-        }
-
-        .order-online-signup-box:hover .signup-box-li-container {
-            display: block;
-            position: absolute;
-            background-color: lightgrey;
-            height: 110px;
-            width: 200px;
-            left: 48%;
-            top: 135%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            padding: 15px 20px;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .order-online-signup-box i {
         
-            bottom: 3px;
-            right: -18px;
-            font-size: 19px;
-        }
-
-        .signup-box-li-container i {
-            position: absolute;
-            top: -19px;
-            font-size: 35px;
-            right: 38px;
-            color: lightgrey;
-
-        }
-
-        .signup-box-li-container a input {
-            width: 100%;
-            background-color: steelblue;
-            border: 1px solid black;
-            border-radius: 5px;
-            transition: all 0.5s ease;
-            width: 100%;
-        }
-
-        .signup-box-li-container input:hover {
-
-            color: white;
-            cursor: pointer;
-            background-color: #265df2;
-        }
-
-        .signup-box-li-container .sign-in-new-customer {
-            display: flex;
-            align-items: baseline;
-            column-gap: 3px;
-        }
-
-        .sign-in-new-customer span {
-            font-size: 13px;
-        }
-
-        .sign-in-new-customer a {
-            text-decoration: none;
-            text-transform: none;
-            font-size: 12px;
-        }
-
-        .sign-in-new-customer a:hover {
-            text-decoration: underline;
-            color: blue;
-            cursor: pointer;
-
-        }*/
-
-        /*@media all and (max-width:995px) {
-            .order-online-signup-box:hover .signup-box-li-container {
-                height: 110px;
-                width: 200px;
-                left: 49%;
-                top: 95%;
-                z-index: 5;
-                transform: translateX(-50%);
-            }
-
-        }*/
     </style>
 
 </head>
@@ -409,7 +317,7 @@
                 <li><a href="#"><i class="fa-solid fa-square-phone"></i> ph no : +91 9751099858</a></li>
             </ul>
         </div>
-        <form id="contactForm">
+        <form id="contactForm" action="#">
 
             <div class="form-group">
                 <label for="name">Name</label>
@@ -430,10 +338,22 @@
             <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" placeholder="Enter Your Message..." required></textarea>
-                <input type="submit" value="Submit" style="margin-bottom: 0;">
+                <input type="submit" value="Submit" onclick="clear_contact_form()"  style="margin-bottom: 0;">
             </div>
 
         </form>
+    </div>
+
+    <!---------- Pop up contact form successfully submitted-->
+
+    <div id="overlay"></div>
+
+    <div id="form-submitted-successfully">
+        <div class="inner_form-submission-section">
+            <i class="fa-solid fa-xmark cancel-icon"></i>
+            <h3>Form Successfully Submitted</h3>
+        </div>
+
     </div>
 
 
