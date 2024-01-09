@@ -269,6 +269,10 @@
                 font-size: 14px;
             }
 
+            .login-inner-container .input-container input {
+                padding: 0 20px;
+            }
+
             .checkbox-content input {
                 margin: 0 4px 1px 4px;
             }
@@ -340,7 +344,7 @@
             <!---- Signup Registration Section-->
             <div class="login-inner-container signup">
                 <h5 class="login-title">Registration</h5>
-                <form action="#" id="signup-form">
+                <form action="#" id="signup-form" onsubmit="validatepassword()">
                     <div class="input-container">
                         <input type="text" placeholder="Enter Your Name" name="name" required>
                         <i class="fa-solid fa-user"></i>
@@ -352,13 +356,15 @@
                     </div>
 
                     <div class="input-container">
-                        <input type="password" class="password p" placeholder="Create Your password" required>
+                        <input type="password" class="password p" id="create_password"
+                            placeholder="Create Your password" required>
                         <i class="fa-solid fa-lock input-icon"></i>
 
                     </div>
 
                     <div class="input-container">
-                        <input type="password" class="password cpassword" placeholder="Confirm Your password" required>
+                        <input type="password" class="password cpassword" id="confirm_password"
+                            placeholder="Confirm Your password" required>
                         <i class="fa-solid fa-lock input-icon"></i>
                         <i class="fa-regular fa-eye-slash show-eye-pw"></i>
                     </div>
@@ -372,8 +378,7 @@
                     </div>
 
                     <div class="input-container button sign-up-button">
-                        <input type="submit" value="Sign Up" onclick="signup_clearinputfields()" id="click-alert"
-                            class="sign-up-submit">
+                        <input type="submit" value="Sign Up" id="click-alert" class="sign-up-submit">
                     </div>
                 </form>
                 <div class="login-signup-container">
@@ -394,6 +399,28 @@
 
 
     <script>
+
+
+
+        function validatepassword(event) {
+            let passw = document.getElementById("create_password").value;
+            let cpassw = document.getElementById("confirm_password").value;
+            if (passw === cpassw) {
+
+                setTimeout(() => {
+                    window.location.href = "order online.html"; // Replace with the actual URL
+                }, 500);
+
+            }
+            else {
+                alert("Password do not Match");
+                event.preventDefault();
+            }
+
+
+
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             const Loginsection = document.querySelector('#Login-section'),
                 pwshowhide = document.querySelectorAll(".show-eye-pw"),
@@ -401,11 +428,7 @@
             let signup = document.querySelector(".signup-link");
             let login = document.querySelector(".login-link");
             const form1 = document.querySelector('#login-form');
-            const form2 = document.querySelector('#signup-form')
-
-
-
-
+            const form2 = document.querySelector('#signup-form');
 
             // js code for show/hide password and icon change
 
@@ -414,24 +437,19 @@
                     pwfields.forEach(pwfield => {
                         if (pwfield.type === "password") {
                             pwfield.type = "text";
-                            console.log('clicked')
-
                             pwshowhide.forEach(icon => {
                                 icon.classList.replace("fa-eye-slash", "fa-eye")
-                            })
+                            });
 
                         } else {
                             pwfield.type = "password";
                             pwshowhide.forEach(icon => {
                                 icon.classList.replace("fa-eye", "fa-eye-slash")
-                            })
+                            });
                         }
-                    })
-                })
-            })
-
-
-
+                    });
+                });
+            });
 
 
             /* login form submission */
@@ -439,10 +457,9 @@
             form1.addEventListener("submit", (event) => {
                 event.preventDefault();
 
-                const all_inputs_filled = Array.from(form1.elements).filter((element) => element.type !== 'password').every((element) => {
+                /*const all_inputs_filled = Array.from(form1.elements).filter((element) => element.type !== 'password').every((element) => {
                     return element.value.trim() !== ''
-                });
-                console.log(all_inputs_filled)
+                });*/
 
                 form1.reset();
                 setTimeout(() => {
@@ -454,21 +471,21 @@
 
 
 
+
             /* signup form submission */
 
             form2.addEventListener("submit", (event) => {
-                event.preventDefault();
 
-                const all_inputs_filled = Array.from(form2.elements).filter((element) => element.type !== 'password').every((element) => {
+
+                /*const all_inputs_filled = Array.from(form2.elements).filter((element) => element.type !== 'password').every((element) => {
                     return element.value.trim() !== ''
-                });
-                console.log(all_inputs_filled)
+                });*/
 
-                setTimeout(() => {
-                    window.location.href = "order online.html"; // Replace with the actual URL
-                }, 500);
+                validatepassword(event);
+
 
             });
+
 
 
 
@@ -479,11 +496,11 @@
             signup.addEventListener("click", () => {
                 Loginsection.classList.add("active")
 
-            })
+            });
 
             login.addEventListener("click", () => {
                 Loginsection.classList.remove("active")
-            })
+            });
 
 
 
@@ -492,7 +509,7 @@
 
 
 
-        })
+        });
 
 
     </script>
